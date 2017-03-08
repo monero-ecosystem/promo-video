@@ -8,7 +8,11 @@ https://paste.fedoraproject.org/542498/14859669 - JM
 
 lost :( 
 
-https://github.com/alvinjoelsantos/promo-video/blob/master/stealth_addresses.md - ajs
+alvinjoelsantos - commit: ee7b7e1
+
+JollyMort - commit: f2a8892
+
+scoobybejesus - commit: 53a5b45
 
 ---
 
@@ -51,7 +55,7 @@ Using your private view key, your wallet can recompute the shared secret; theref
 ##5) - Tie-in to ring signatures
 
 As you can see, stealth addresses protect the privacy and identity of recipients.
-On the input side of the transaction, the sender's identity is shielded with the use of ring signatures.
+On the input side of the transaction, the sender's privacy is shielded with the use of ring signatures.
 Ring signatures help obfuscate the source of transactions, by including various foreign outputs with the “real” output.
 We'll discuss ring signatures and Monero's other privacy features in greater detail in another video.
  
