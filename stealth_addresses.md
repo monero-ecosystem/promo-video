@@ -38,7 +38,7 @@ We learned that Monero exist on the blockchain in the form of outputs.
 When you own Monero, it means that you have exclusive control over some of these outputs.
 When you transmit funds to a recipient, you are announcing to the network that you wish to deplete some of your outputs to create brand new outputs for someone else.
 The sender uses the recipient’s public address to create a unique output in such a way that only the intended recipient is able to recognize and spend the output.
-As a result, outputs are unlinkable to, or associated with, any public address. Well, buckle your seatbelts, because we're about to get technical.
+As a result, outputs are unlinkable to, nor associated with, any public address. Well, buckle your seatbelts, because we're about to get technical.
 
 ##3) - The Term - Stealth Addresses
 
