@@ -43,7 +43,7 @@ Well, buckle your seatbelts, because we're about to get technical.
 
 ##3) - The Term - Stealth Addresses
 
-The phrase “stealth address” referrers to the overall scheme in Monero, which allows users to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address. 
+The phrase “stealth address” refers to the overall scheme in Monero, which allows users to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address. 
 An outside observer cannot tell if any transaction belongs to a standard address or link two addresses together.
 
 ##4) - One-time Destinations
