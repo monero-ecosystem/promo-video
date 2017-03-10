@@ -14,51 +14,54 @@ JollyMort - commit: f2a8892
 
 scoobybejesus - commit: 53a5b45
 
+alvinjoelsantos- commit: df603fd
+
+knaccc: https://github.com/alvinjoelsantos/promo-video/issues/3
+
+scoobybejesus: https://github.com/alvinjoelsantos/promo-video/issues/3
+
+scoobybejesus: https://paste.fedoraproject.org/paste/c6UG6HGOXIoZFeo72sZsCF5M1UNdIGYhyRLivL9gydE=
+
+this one
+
 ---
 
 ##1) - Intro
 
-Monero is a secure, private, untraceable currency.
-Monero seeks to be electronic, private cash.
-It is open-source, decentralized, and freely accessible to all.
-In this video, we will focus on Monero's stealth addresses.
+Monero is secure, electronic, untraceable cash. It is open-source, decentralized, and freely accessible to all. 
+In this video, we will focus on stealth addresses.
  
 ##2) - Technology recap
 
 Let's take a step back, and recap some concepts from the previous video.
-We learned that Monero transactions are made up of inputs and outputs.
-When someone sends you Monero, the transaction they create depletes an existing output of theirs to form a brand new output for you.
-Furthermore, we mentioned that the sender uses your public address to create an output that only your wallet knows belongs to you.
-Let's take this a step further, to gain a better understand of how this works.
+We learned that Monero exist on the blockchain in the form of outputs.
+When you own Monero, it means that you have exclusive control over some of these outputs.
+When you transmit funds to a recipient, you are announcing to the network that you wish to deplete some of your outputs to create brand new outputs for someone else.
+The sender uses the recipient’s public address to create a unique output in such a way that only the intended recipient is able to recognize and spend the output.
+As a result, outputs are unlinkable to, or associated with, any public address. Well, buckle your seatbelts, because we're about to get technical.
 
 ##3) - The Term - Stealth Addresses
 
-Every Monero public address is a stealth address!
-But how can something public also be stealthy?
-We call Monero public addresses "stealth addresses," because they never appear on the blockchain.
-Since Monero's blockchain does not store balances in public addresses, we see that stealth addresses protect the recipient's privacy.
-Now you might ask, "if I give out my public address to receive monero, where is the monero actually sent?"
-This is where things get a little technical.
-Your monero is stored in multiple one-time public keys (a more precise term for Monero's outputs), which are controlled by your wallet.
-Let's go even more in-depth to see how this works.
+Stealth Addresses could be seen in two ways. 
+In one sense, every public address is a stealth address given that public addresses never appear on the blockchain.
+In another sense, the unique output that is created for a transaction could also be referred to as a stealth address seeing that it is the destination where funds are transmitted to, but not associated with the recipient’s public address.
+Stealth addresses are what protect the privacy of Monero recipients.
 
 ##4) - One-time Destinations
 
-Your public address is made up of two parts: a public spend key and a public view key.
-When someone sends you Monero, their wallet will use each of those keys to form a new output.
-Using your public view key, the sender's wallet will compute a random shared secret, only knowable by the sender's wallet and your wallet.
-Then the sender's wallet will use the shared secret, along with your public spend key, to create a unique, one-time public key (your output!).
-This one-time public key is what resides on the blockchain and can be seen by everyone.
-Even though everyone can see the output, no one knows which public address it was sent to, because outside observers can not know the shared secret.
-Using your private view key, your wallet can recompute the shared secret; therefore, only your wallet is able to identify the output (one-time public key) as belonging to you.
+The recipient's public address consists of two cryptographic keys, a public view key and a public spend key.
+When someone sends Monero, the sender’s wallet will use these keys to compute a random shared secret only knowable by the sender's wallet and recipient's wallet; the sender’s wallet will then create a unique, one-time public key (your output!) to capsulate the transaction with the shared secret.
+You heard right; Monero outputs are also called one-time public keys. One-time public keys are what reside on the blockchain and can be seen by everyone.
+Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction, because outside observers do not know the shared secret.
+Recipients are able to recompute the shared secret with their wallet’s private view key and identify outputs (one-time public keys) that belong to them.
  
 ##5) - Tie-in to ring signatures
 
-As you can see, stealth addresses protect the privacy and identity of recipients.
-On the input side of the transaction, the sender's privacy is shielded with the use of ring signatures.
+As you can see, stealth addresses protect the privacy of recipients.
+On the other side of the transaction, the sender's privacy is shielded with the use of ring signatures.
 Ring signatures help obfuscate the source of transactions, by including various foreign outputs with the “real” output.
-We'll discuss ring signatures and Monero's other privacy features in greater detail in another video.
  
 ##6) - The end?
 
+In our next video, we’ll discuss the ring signature concept in more detail and see how this feature advances untraceability in Monero.
 If you are interested in what makes Monero the leading privacy-centric cryptocurrency, please check out the other videos or visit getmonero.org.
