@@ -50,7 +50,7 @@ Stealth addresses are what protect the privacy of Monero recipients.
 ##4) - One-time Destinations
 
 The recipient's public address consists of two cryptographic keys, a public view key and a public spend key.
-When someone sends Monero, the sender’s wallet will use these keys to compute a random shared secret only knowable by the sender's wallet and recipient's wallet; the sender’s wallet will then create a unique, one-time public key (your output!) to capsulate the transaction with the shared secret.
+When someone sends Monero, the sender’s wallet will use these keys to compute a random shared secret only knowable by the sender's wallet and recipient's wallet; the sender’s wallet will then create a unique, one-time public key (your output!) to encapsulate the transaction with the shared secret.
 You heard right; Monero outputs are also called one-time public keys. One-time public keys are what reside on the blockchain and can be seen by everyone.
 Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction, because outside observers do not know the shared secret.
 Recipients are able to recompute the shared secret with their wallet’s private view key and identify outputs (one-time public keys) that belong to them.
