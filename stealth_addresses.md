@@ -44,7 +44,7 @@ As a result, outputs are unlinkable to, nor associated with, any public address.
 
 Stealth Addresses could be seen in two ways. 
 In one sense, every public address is a stealth address given that public addresses never appear on the blockchain.
-In another sense, the unique output that is created for a transaction could also be referred to as a stealth address seeing that it is the destination where funds are transmitted to, but not associated with the recipient’s public address.
+In another sense, the unique output that is created for a transaction could also be referred to as a stealth address seeing that it is the destination where funds are transmitted to, but are unlinkabile to a recipient’s public address.
 Stealth addresses are what protect the privacy of Monero recipients.
 
 ##4) - One-time Destinations
