@@ -22,7 +22,7 @@ scoobybejesus: https://github.com/alvinjoelsantos/promo-video/issues/3
 
 scoobybejesus: https://paste.fedoraproject.org/paste/c6UG6HGOXIoZFeo72sZsCF5M1UNdIGYhyRLivL9gydE=
 
-alvinjoelsantos- commit: e14a015, c7e30df, 35062ab
+alvinjoelsantos- commit: e14a015, c7e30df, 35062ab, 807d3a0
 
 this one
 
@@ -44,21 +44,26 @@ Let's take this a step further, and see how stealth addresses enhance privacy fo
 
 ##3) - The Term - Stealth Addresses
 
-The phrase “stealth address” refers to the overall mechanism in Monero, which allows recipients to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address.
-In our example, Alice would create a random one-time destination value on behalf of Bob, where newly created outputs are sent to.
-Only Alice and Bob are able to verify where an output was sent with their wallet keys.
+The phrase “stealth address” refers to the overall mechanism in Monero, which allows recipients to have a single address that can be publically shared, but still be able to receive payments that can't be linked together or to any specific address.
+In our example, Alice would create a random one-time destination for Bob, to which monero are transferred.
+Only Alice and Bob are able to verify that this output was made for Bob, and only Bob can consume it in some future transaction.
 An outside observer cannot link two addresses together nor tell if any transaction is associated to a public address.
 Well, buckle your seatbelts, because we're about to get technical.
 
 ##4) - One-time Destinations
 
 A Monero public address consists of two cryptographic keys, a public view key and a public spend key, which are packed together into a 95-character address.
-This results in Monero addresses being nearly twice as long as Bitcoin addresses.
-When Alice sends Monero to Bob, Alice’s wallet will unpack Bob's public address to extract his public keys.
-A unique output is created with the use of the Bob's public keys and some random data with a touch of sugar, spice and everything nice.
-Alice’s wallet will encapsulate this new output into a signed container generating a one-time public key, which is then broadcast to the blockchain.
-One-time public keys can be seen by everyone. Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction.
-Bob is able to scan the blockchain and locate outputs that belongs to him by using his wallet’s private view key.
+When Alice sends Monero to Bob, Alice’s wallet will unpack Bob's two public keys from his address.
+A unique one-time key (aka output) is created with the use of both Bob's public keys and some random data as the ingredients.
+It will serve as a container of funds sent to Bob and become part of a transaction which is then broadcast to the blockchain.
+The random data is what makes outputs unlinkable because looking at any output it's impossible to tell which 3 ingredients were used to create it.
+However, knowing some of them lets you identify it and access to private spend key also to spend it.
+The random data and Bob's public view key make a "shared secret".
+Even without knowing the random data, Bob can recover the shared secret by using his privete view key.
+Adding his public spend key into the mix gives him all 3 ingredients needed to reconstruct the output.
+An output's one-time public key can be seen by everyone.
+Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction.
+Bob is able to scan the blockchain and locate outputs that belongs to him by using his wallet’s private view key, and consume those using his private spend key.
 
 ##5) - Tie-in to ring signatures
 
