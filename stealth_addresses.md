@@ -47,18 +47,18 @@ Well, buckle your seatbelts, because we're about to get technical.
 The phrase “stealth address” refers to the overall scheme in Monero, which allows users to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address.
 The sender creates a random one-time destination value for every transaction on behalf of the recipient.
 Only the sender and recipient can determine where a payment was sent.
-An outside observer cannot tell if any transaction belongs to a standard address or link two addresses together.
+An outside observer cannot tell if any transaction belongs to a public address or link two addresses together.
 Let's take this a step further, and see how this works.
 
 ##4) - One-time Destinations
 
-A Monero standard address consists of two cryptographic keys, a public view key and a public spend key, which are packed together into a 95-character address.
-This results in Monero standard addresses being nearly twice as large as Bitcoin addresses.
+A Monero public address consists of two cryptographic keys, a public view key and a public spend key, which are packed together into a 95-character address.
+This results in Monero addresses being nearly twice as large as Bitcoin addresses.
 When someone sends Monero, the sender’s wallet will unpack an address to extract the recipient’s public keys.
 A unique output is created with the use of the recipient’s public keys and some random data.
-The sender’s wallet will then encapsulate this output into a signed container generating a one-time public key, which is broadcast to the blockchain.
-One-time public keys can be seen by everyone. Even though everyone can see the one-time public keys, no one knows which standard addresses are associated to any particular transaction.
-Recipients are able to scan the blockchain and locate one-time public keys that belongs to them (their "outputs") by using the wallet’s private view key.
+The sender’s wallet will encapsulate this new output into a signed container generating a one-time public key, which is then broadcast to the blockchain.
+One-time public keys can be seen by everyone. Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction.
+Recipients are able to scan the blockchain and locate one-time public keys (their "outputs") that belongs to them by using the wallet’s private view key.
 
 ##5) - Tie-in to ring signatures
 
