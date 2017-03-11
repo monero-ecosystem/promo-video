@@ -38,17 +38,17 @@ In this video, we will focus on stealth addresses.
 Let's take a step back, and recap some concepts from the previous video.
 We learned that Monero uses blockchain technology to record transactions.
 When Alice owns Monero, it means that she has exclusive control over some outputs.
-When Alice sends Monero to Bob, Alice is announcing to the network that she wishes to consume some of her outputs and create brand new output for Bob.
+When Alice sends Monero to Bob, Alice is announcing to the network that she wishes to consume some of her outputs and create a brand new output for Bob.
 In other words, a transaction is the transformation of old outputs belonging to one wallet into new outputs belonging to another.
-Well, buckle your seatbelts, because we're about to get technical.
+Let's take this a step further, and see how stealth addresses enhance privacy for recipients.
 
 ##3) - The Term - Stealth Addresses
 
-The phrase “stealth address” refers to the overall scheme in Monero, which allows users to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address.
+The phrase “stealth address” refers to the overall scheme in Monero, which allows recipients to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address.
 In our example, Alice would create a random one-time destination value on behalf of Bob, where newly created outputs are sent to.
 Only Alice and Bob are able to verify where an output was sent with their wallet keys.
 An outside observer cannot link two addresses together nor tell if any transaction is associated to a public address.
-Let's take this a step further, and see how this works.
+Well, buckle your seatbelts, because we're about to get technical.
 
 ##4) - One-time Destinations
 
