@@ -55,7 +55,7 @@ Well, buckle your seatbelts, because we're about to get technical.
 A Monero public address consists of two cryptographic keys, a public view key and a public spend key, which are packed together into a 95-character address.
 This results in Monero addresses being nearly twice as long as Bitcoin addresses.
 When Alice sends Monero to Bob, Alice’s wallet will unpack Bob's public address to extract his public keys.
-A unique output is created with the use of the Bob's public keys and some random data.
+A unique output is created with the use of the Bob's public keys and some random data with a touch of sugar, spice and everything nice.
 Alice’s wallet will encapsulate this new output into a signed container generating a one-time public key, which is then broadcast to the blockchain.
 One-time public keys can be seen by everyone. Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction.
 Bob is able to scan the blockchain and locate outputs that belongs to him by using his wallet’s private view key.
