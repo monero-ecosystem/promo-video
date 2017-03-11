@@ -24,6 +24,8 @@ scoobybejesus: https://paste.fedoraproject.org/paste/c6UG6HGOXIoZFeo72sZsCF5M1UN
 
 alvinjoelsantos- commit: e14a015, c7e30df, 35062ab, 807d3a0
 
+JollyMort - commit: 3c339f7
+
 this one
 
 ---
@@ -45,7 +47,7 @@ Let's take this a step further, and see how stealth addresses enhance privacy fo
 ##3) - The Term - Stealth Addresses
 
 The phrase “stealth address” refers to the overall mechanism in Monero, which allows recipients to have a single address that can be publically shared, but still be able to receive payments that can't be linked together or to any specific address.
-In our example, Alice would create a random one-time destination for Bob, to which monero are transferred.
+In our example, Alice would create a random one-time destination for Bob, to which Monero are transferred.
 Only Alice and Bob are able to verify that this output was made for Bob, and only Bob can consume it in some future transaction.
 An outside observer cannot link two addresses together nor tell if any transaction is associated to a public address.
 Well, buckle your seatbelts, because we're about to get technical.
@@ -53,17 +55,16 @@ Well, buckle your seatbelts, because we're about to get technical.
 ##4) - One-time Destinations
 
 A Monero public address consists of two cryptographic keys, a public view key and a public spend key, which are packed together into a 95-character address.
-When Alice sends Monero to Bob, Alice’s wallet will unpack Bob's two public keys from his address.
-A unique one-time key (aka output) is created with the use of both Bob's public keys and some random data as the ingredients.
-It will serve as a container of funds sent to Bob and become part of a transaction which is then broadcast to the blockchain.
-The random data is what makes outputs unlinkable because looking at any output it's impossible to tell which 3 ingredients were used to create it.
-However, knowing some of them lets you identify it and access to private spend key also to spend it.
-The random data and Bob's public view key make a "shared secret".
-Even without knowing the random data, Bob can recover the shared secret by using his privete view key.
-Adding his public spend key into the mix gives him all 3 ingredients needed to reconstruct the output.
-An output's one-time public key can be seen by everyone.
-Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction.
-Bob is able to scan the blockchain and locate outputs that belongs to him by using his wallet’s private view key, and consume those using his private spend key.
+When Alice sends Monero to Bob, Alice’s wallet will unpack Bob's public keys from his address.
+Alice’s wallet will then create a unique one-time key (also known as an output), which is made up of 3 components: Bob's public view key and public spend key as well as some random data.
+The one-time key will serve as a container of the Monero sent to Bob, which is broadcast to the blockchain as a transaction.
+Everyone can see an output’s one-time key, but no one knows which public addresses are connected to any particular transaction.
+When an outside observer looks at the blockchain, it's impossible to tell which of the 3 components were used to create Bob's output.
+However, knowing some of the components allows a person to identify an output and if the person has access to a private spend key associated with the output, they would be able to spend it.
+So, the random data and Bob's public view key can be considered as a "shared secret."
+Even without knowing the random data, Bob can still recover the shared secret by using his wallet's private view key and public spend key to reconstruct the output sent by Alice.
+To receive Monero in to his wallet, Bob is now able to scan the blockchain and locate outputs that belongs to him by using his private view key and consume those outputs by using his private spend key.
+This process occurs without ever having Bob’s public address linked to any transaction.
 
 ##5) - Tie-in to ring signatures
 
