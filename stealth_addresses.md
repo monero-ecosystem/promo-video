@@ -37,28 +37,28 @@ In this video, we will focus on stealth addresses.
 
 Let's take a step back, and recap some concepts from the previous video.
 We learned that Monero uses blockchain technology to record transactions.
-When you own Monero, it means that you have exclusive control over some outputs.
-When you send Monero to someone, you are announcing to the network that you wish to consume some of your outputs and create brand new output for a recipient.
+When Alice owns Monero, it means that she has exclusive control over some outputs.
+When Alice sends Monero to Bob, Alice is announcing to the network that she wishes to consume some of her outputs and create brand new output for Bob.
 In other words, a transaction is the transformation of old outputs belonging to one wallet into new outputs belonging to another.
 Well, buckle your seatbelts, because we're about to get technical.
 
 ##3) - The Term - Stealth Addresses
 
 The phrase “stealth address” refers to the overall scheme in Monero, which allows users to have a single address that can be publically shared, but still be able to receive payments that are unlinkable to any specific address.
-The sender creates a random one-time destination value for every transaction on behalf of the recipient.
-Only the sender and recipient can determine where a payment was sent.
-An outside observer cannot tell if any transaction belongs to a public address or link two addresses together.
+In our example, Alice would create a random one-time destination value on behalf of Bob, where newly created outputs are sent to.
+Only Alice and Bob are able to verify where an output was sent with their wallet keys.
+An outside observer cannot link two addresses together nor tell if any transaction is associated to a public address.
 Let's take this a step further, and see how this works.
 
 ##4) - One-time Destinations
 
 A Monero public address consists of two cryptographic keys, a public view key and a public spend key, which are packed together into a 95-character address.
-This results in Monero addresses being nearly twice as large as Bitcoin addresses.
-When someone sends Monero, the sender’s wallet will unpack an address to extract the recipient’s public keys.
-A unique output is created with the use of the recipient’s public keys and some random data.
-The sender’s wallet will encapsulate this new output into a signed container generating a one-time public key, which is then broadcast to the blockchain.
+This results in Monero addresses being nearly twice as long as Bitcoin addresses.
+When Alice sends Monero to Bob, Alice’s wallet will unpack Bob's public address to extract his public keys.
+A unique output is created with the use of the Bob's public keys and some random data.
+Alice’s wallet will encapsulate this new output into a signed container generating a one-time public key, which is then broadcast to the blockchain.
 One-time public keys can be seen by everyone. Even though everyone can see the one-time public keys, no one knows which public addresses are associated to any particular transaction.
-Recipients are able to scan the blockchain and locate one-time public keys (their "outputs") that belongs to them by using the wallet’s private view key.
+Bob is able to scan the blockchain and locate outputs that belongs to him by using his wallet’s private view key.
 
 ##5) - Tie-in to ring signatures
 
