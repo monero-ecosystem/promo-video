@@ -54,13 +54,13 @@ Now let's take this a step further, to see how stealth addresses enhances a user
 
 ## 3) - The Term - Stealth Addresses
 
-In every transaction, a stealth address, also known as a one-time public key, is automatically generated where outputs are sent to and recorded on the blockchain.
-An outside observer cannot tell if any transaction is associated to a specific wallet address nor linked two addresses together by just looking at the blockchain.
-Therefore, when Alice sends Monero to Bob, the outputs Bob receives will not be publicly associated with Bob’s wallet address. 
+In every transaction, a stealth address, also known as an one-time public key, is automatically generated and it is where outputs are sent to and recorded on the blockchain.
+An outside observer cannot tell if any transaction is associated to a specific wallet address nor link two addresses together by just looking at the blockchain.
+Therefore, when Alice sends Monero to Bob, the output Bob receives will not be publicly associated with Bob’s wallet address. 
 However, if Alice ever needs to prove that she in fact sent Monero to Bob, her wallet has the ability to verify that payment was sent.
 Bob can rest assured that no one else can see when or if any Monero was sent to him.
 If Bob were a merchant, this feature would be a great benefit, because no one can tell how many different customers he has, whether any of them are repeat customers, or if he has any customers at all.
-Well, buckle your seatbelts, because we are about to go over some fairly technical details.
+Well, buckle your seatbelts, because we are about to go over some fairly technical stuff.
 
 ## 4) - One-time Destinations
 
