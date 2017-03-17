@@ -1,4 +1,4 @@
-##History:
+## History:
 
 https://paste.fedoraproject.org/533517/83578148/ - initial, JM
 
@@ -26,6 +26,8 @@ alvinjoelsantos- commit: e14a015, c7e30df, 35062ab, 807d3a0
 
 JollyMort - commit: 3c339f7
 
+alvinjoelsantos - commit: 4de82c2
+
 knaccc: 3#issuecomment-286899474
 
 scoobybejesus: 3#issuecomment-287072833
@@ -36,12 +38,12 @@ this one
 
 ---
 
-##1) - Intro
+## 1) - Intro
 
 Monero is secure, untraceable, electronic cash. It is open-source, decentralized, and freely accessible to all.
 In this video, we will focus on stealth addresses.
  
-##2) - Technology recap
+## 2) - Technology recap
 
 Let's take a step back, and recap some concepts from the previous video.
 We learned that Monero uses a blockchain to record transactions.
@@ -50,7 +52,7 @@ When Alice sends Monero to Bob, Alice is announcing to the network that she wish
 In other words, a transaction is the transformation of old outputs belonging to one wallet into new outputs belonging to another.
 Now let's take this a step further, to see how stealth addresses enhances a user’s privacy.
 
-##3) - The Term - Stealth Addresses
+## 3) - The Term - Stealth Addresses
 
 In every transaction, a stealth address, also known as a one-time public key, is automatically generated where outputs are sent to and recorded on the blockchain.
 An outside observer cannot tell if any transaction is associated to a specific wallet address nor linked two addresses together by just looking at the blockchain.
@@ -60,7 +62,7 @@ Bob can rest assured that no one else can see when or if any Monero was sent to 
 If Bob were a merchant, this feature would be a great benefit, because no one can tell how many different customers he has, whether any of them are repeat customers, or if he has any customers at all.
 Well, buckle your seatbelts, because we are about to go over some fairly technical details.
 
-##4) - One-time Destinations
+## 4) - One-time Destinations
 
 A Monero wallet address is a 95-character string, which consists of a public view key and a public spend key.
 When Alice sends Monero to Bob, Alice’s wallet will use Bob’s public view key and public spend key as well as some random data to generate a unique one-time public key for Bob’s new output. 
@@ -69,13 +71,13 @@ The output is created in such a way that Bob is able to locate the output destin
 Once the output is detected and retrieved by Bob’s wallet, he would be able to calculate a one-time private key and spend the output with his wallet’s private spend key.
 This whole process occurs without ever having Bob’s wallet address publically linked to any transaction.
 
-##5) - Tie-in to ring signatures
+## 5) - Tie-in to ring signatures
 
 As you can see, stealth addresses prevent outputs from being associated with wallet addresses.
 The sender's privacy is shielded with the use of ring signatures.
 Ring signatures help obfuscate the source of outputs.
 In our next video, we’ll discuss the ring signature concept in more detail and see how this feature creates untraceability in Monero.
 
-##6) - The end?
+## 6) - The end?
 
 If you are interested in what makes Monero the leading privacy-centric cryptocurrency, please check out the other videos or visit getmonero.org.
