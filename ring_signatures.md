@@ -1,7 +1,7 @@
 ## History:
 initial, Scoob (Nov. 2016)
 
-ajs - 6091e9a, 39df73f, 2355e1b
+ajs - 6091e9a, 39df73f, 2355e1b, beffe23
 
 this one
 
@@ -20,27 +20,31 @@ On the input side of the transaction, the sender's privacy is protected with the
 
 ## 3) - The Terms - Ring Signatures, Ring CT
 
-A ring signature is a type of digital signature in which a group of possible signers are combined to produce a distinct signature that authorizes a transaction.
-This is analogous to the signing of a check from your bank, but with the actual signer remaining anonymous.
-The non-signers are old transaction outputs selected from the blockchain, which are repurposed as decoy inputs in a new transaction.
-Over the course of time, transaction outputs could be reused in this way multiple times.
-A transaction’s “ring size” is the sum of these outputs plus one (the “real” newly created output, which is destined for a recipient).
-In a ring where you have the actual signer and non-signers, all members are equal and valid. 
-There is no way an outside observer can tell which of the possible signers belongs to a sender’s wallet. 
+A ring signature is a type of digital signature in which a group of possible signers are fused together to produce a distinct signature that authorizes a transaction.
+This is analogous to the signing a check from a joint bank account, but with the actual signer remaining anonymous.
+The digital signature is made up of the actual signer (the sender) combined with non-signers to form a "ring," where all members are equal and valid.
 This feature helps the sender hide the origin of the transaction, becoming in a sense camouflaged from detection among the other ring members.
+There is no way an outside observer can tell which of the possible signers belongs to a sender’s wallet.
+
+The non-signers are decoy outputs selected from the blockchain, which are repurposed as "fake" inputs in a new transaction.
+Over the course of time, past transaction outputs could be reused in this way multiple times.
+A transaction’s “ring size” is the sum of fake inputs plus one (the “real” newly created input, which is destined for a recipient).
+
 To further enhance anonymity, Monero implements a protocol with ring signatures called “Ring Confidential Transactions” (also known as Ring CT).
 With Ring CT, the transaction amounts are hidden.
+
 Now at this point, you might ask if the sender and recipient information are private and the amounts are hidden, what would prevent someone from spending the same Monero twice.
 This problem is addressed with the use of something called a “key image.”
-For every newly created output, a unique key image is generated that can only be spent once.
+For every newly created input, a unique key image is generated that can only be spent once.
 When a transaction is transmitted to the Monero network, miners will verify that the key image does not already exist in the blockchain in order to prevent double-spends.
+
 Now, let’s walk through an example to see how these concepts tie together.
 
 ## 4) – Ring Signatures Transaction
 
-Alice wants to send Monero to Bob with a “mix in” value of four old outputs, which are used as decoy inputs in the transaction.
-Alice is able to pull these outputs by connecting to an active node or pulling the outputs from a locally saved copy of the blockchain.
-In our example, Alice’s transaction would have four old outputs plus the “real” output that is destined for Bob, resulting in a ring size of five.
+Alice wants to send Monero to Bob with a “mix in” value of four fake inputs.
+Alice is able to create these fake inputs by randomly retrieving four past transaction outputs from the blockchain.
+Alice’s transaction would have four fake inputs plus the “real” input that is destined for Bob, resulting in a ring size of five.
 This forms a group of five possible signers.
 An outside observer, including Bob himself, would not know which of the five possible signers belongs to Alice’s wallet.
 The amount of Monero being sent to Bob is also unknown by the public.
