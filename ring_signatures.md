@@ -3,9 +3,10 @@ initial, Scoob (Nov. 2016)
 
 ajs - 6091e9a, 39df73f, 2355e1b, beffe23, a18d8de
 
-JM - <need link>
+JM - a18d8de
 
 Scoob - this one
+
 ---
 
 ## 1) - Intro
