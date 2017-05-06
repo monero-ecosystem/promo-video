@@ -5,7 +5,9 @@ ajs - 6091e9a, 39df73f, 2355e1b, beffe23, a18d8de
 
 JM - a18d8de
 
-Scoob - this one
+Scoob - 43af275
+
+SamsungGalaxyPlayer - this one
 
 ---
 
