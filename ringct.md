@@ -1,6 +1,8 @@
 ## History:
 initial, Scoob (Apr. 2017)
 
+SamsungGalaxyPlayer - this one
+
 ## 1) - Intro
 
 Monero is secure, untraceable, electronic cash. It is open-source, decentralized, and freely accessible to all.
