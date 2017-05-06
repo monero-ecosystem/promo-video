@@ -57,8 +57,8 @@ However, with the key image, the network is able to verify that the Monero being
 
 As you can see, using ring signatures Monero protects the privacy of the sender by obscuring the source of inputs, and in doing so, ensures that outputs remain untraceable.
 
-To increase the privacy of both parties to a transaction, Ring Confidential Transactions were implemented to hide transaction amounts.
-Ring Confidential Transactions is commonly referred to as RingCT.
+To increase the privacy of both parties in a transaction, Ring Confidential Transactions were implemented to hide transaction amounts.
+Ring Confidential Transactions is commonly referred to as RingCT and brings an improvement to the ring signatures discussed in this video.
 We'll talk about Ring CT in our next video.
 
 ## 6) - The end?
