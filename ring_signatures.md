@@ -41,7 +41,7 @@ This feature helps the sender hide the origin of the transaction, by making all 
 
 You may now be asking yourself, "if there is no way for a third party to verify which intput is being spent, what would prevent someone from spending the same output twice?"
 This potential issue is addressed by the use of “key images.”
-A key image is a cryptographic key derived from the real output. 
+A key image is a cryptographic key derived from the real output and is made part of every ring signature transaction.
 There can exist only one key image for each output on the blockchain, yet due to some mathematical wizardry, it is not possible to determine which output created which key image.
 A list of all used key images are maintained in the blockchain, enabling miners to verify that no Monero are spent twice.
 
