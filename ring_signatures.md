@@ -42,7 +42,7 @@ This feature helps the sender hide the origin of the transaction, by making all 
 You may now be asking yourself, "if there is no way for a third party to verify which output is being spent, what would prevent someone from spending the same output twice?"
 This potential issue is addressed by the use of “key images.”
 A key image is a cryptographic key derived from the real output and is made part of every ring signature transaction.
-There can exist only one key image for each output on the blockchain, yet due to some mathematical wizardry, it is not possible to determine which output created which key image.
+There can exist only one key image for each output on the blockchain, yet due to its cryptographic properties, it is not possible to determine which output created which key image.
 A list of all used key images are maintained in the blockchain, enabling miners to verify that no Monero are spent twice.
 
 Let's go through an example to see how all this works.
@@ -50,12 +50,14 @@ Let's go through an example to see how all this works.
 ## 4) – Ring Signatures Transaction
 
 Alice wants to send Monero to Bob with a “ringsize” value of five. 
-One of the five inputs will be the real output Alice's wallet created particularly for Bob.
-The other four inputs are fake outputs that are selected from the blockchain, which are used as decoys.
-This forms a group of five possible signers, where all ring members are plausibly, the actual signer of the transaction.
-To an outside observer, including to Bob himself, it's not clear which input was truly signed by Alice’s wallet.
+One of the five inputs will come from Alice's wallet which will be the one actually getting consumed to make the transaction.
+The other four inputs are some arbitrary one-time keys picked from anywhere\* on the blockchain, and are used as decoys.
+This forms a group of five possible signers, where all ring members are plausibly the actual signer of the transaction.
+To an outside observer, including to Bob himself, it's not clear which input was truly signed by some Alice’s one-time key.
 However, with the key image, the network is able to securely confirm that the Monero being transfered to Bob has not been spent before.
-As you can see, by using ring signatures, Monero protects the privacy of the sender by obscuring the source of inputs, and in doing so, ensures that outputs remain untraceable.
+As you can see, by using ring signatures, Monero protects the privacy of the sender by obscuring the source of inputs, and in doing so, ensures that the origin of any monero remains untraceable.
+
+\* Anywhere only in case of RCT one-time keys. Some limitations apply to pre-RCT.
 
 ## 5) RingCT
 
