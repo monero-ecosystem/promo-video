@@ -11,7 +11,9 @@ SamsungGalaxyPlayer - 4a4e99f
 
 ajs - a292a18 - 0aad47d
 
-JM - this one
+JM - f22aa69
+
+ajs - this one
 
 ---
 
@@ -36,14 +38,14 @@ This is analogous to the signing of a check from a joint bank account, but with 
 The digital signature is made up of the actual signer combined with non-signers to form a "ring," where all members are equal and valid.
 The actual signer is a one-time spend key that corresponds with an output being spent from the sender's wallet.
 The non-signers are past transaction outputs pulled from the blockchain, which act as decoys.
-The real output and the decoy outputs together make up the inputs of a transaction.
-To a third party, all of the inputs appear equally likely to be the real output being spent in the transaction.
+These outputs together make up the inputs of a transaction.
+To a third party, all of the inputs appear equally likely to be the output being spent in the transaction.
 This feature helps the sender hide the origin of the transaction, by making all inputs indistinguishable from each other.
 
 
 You may now be asking yourself, "if there is no way for a third party to verify which output is being spent, what would prevent someone from spending the same output twice?"
 This potential issue is addressed by the use of “key images.”
-A key image is a cryptographic key derived from the real output and is made part of every ring signature transaction.
+A key image is a cryptographic key derived from an output being spent and is made part of every ring signature transaction.
 There can exist only one key image for each output on the blockchain, yet due to its cryptographic properties, it is not possible to determine which output created which key image.
 A list of all used key images are maintained in the blockchain, enabling miners to verify that no Monero are spent twice.
 
@@ -52,14 +54,12 @@ Let's go through an example to see how all this works.
 ## 4) – Ring Signatures Transaction
 
 Alice wants to send Monero to Bob with a “ringsize” value of five. 
-One of the five inputs will come from Alice's wallet which will be the one actually getting consumed to make the transaction.
-The other four inputs are some arbitrary one-time keys picked from anywhere\* on the blockchain, and are used as decoys.
+One of the five inputs will come from Alice's wallet, which will be getting consumed in the transaction.
+The other four inputs are arbitrary picked from the blockchain, and are used as decoys.
 This forms a group of five possible signers, where all ring members are plausibly the actual signer of the transaction.
-To an outside observer, including to Bob himself, it's not clear which input was truly signed by some Alice’s one-time key.
+To an outside observer, including to Bob himself, it's not clear which input was truly signed by Alice’s one-time spend key.
 However, with the key image, the network is able to securely confirm that the Monero being transfered to Bob has not been spent before.
 As you can see, by using ring signatures, Monero protects the privacy of the sender by obscuring the source of inputs, and in doing so, ensures that the origin of any monero remains untraceable.
-
-\* Anywhere only in case of RCT one-time keys. Some limitations apply to pre-RCT.
 
 ## 5) RingCT
 
