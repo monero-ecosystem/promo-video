@@ -59,8 +59,8 @@ As you can see, by using ring signatures, Monero protects the privacy of the sen
 
 ## 5) RingCT
 
-To increase the privacy of both parties in a transaction, Ring Confidential Transactions were implemented to hide transaction amounts.
-Ring Confidential Transactions is commonly referred to as RingCT and brings some improvement to the ring signture protocol.
+To increase the privacy of both parties, Ring Confidential Transactions, commonly referred to as RingCT, were implemented to hide transaction amounts.
+RingCT brings some improvement to the ring signture protocol.
 We'll talk more about RingCT in our next video.
 
 ## 6) - The end?
