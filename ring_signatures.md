@@ -9,7 +9,9 @@ Scoob - 43af275
 
 SamsungGalaxyPlayer - 4a4e99f
 
-ajs - this one
+ajs - a292a18 - 0aad47d
+
+JM - this one
 
 ---
 
