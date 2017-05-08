@@ -13,7 +13,9 @@ ajs - a292a18 - 0aad47d
 
 JM - f22aa69
 
-ajs - this one
+ajs - 08ffd69
+
+Scoob - this one
 
 ---
 
@@ -47,18 +49,18 @@ You may now be asking yourself, "if there is no way for a third party to verify 
 This potential issue is addressed by the use of “key images.”
 A key image is a cryptographic key derived from an output being spent and is made part of every ring signature transaction.
 There can exist only one key image for each output on the blockchain, yet due to its cryptographic properties, it is not possible to determine which output created which key image.
-A list of all used key images are maintained in the blockchain, enabling miners to verify that no Monero are spent twice.
+A list of all used key images are maintained in the blockchain, enabling miners to verify that no outputs are spent twice.
 
 Let's go through an example to see how all this works.
 
 ## 4) – Ring Signatures Transaction
 
 Alice wants to send Monero to Bob with a “ringsize” value of five. 
-One of the five inputs will come from Alice's wallet, which will be getting consumed in the transaction.
-The other four inputs are arbitrary picked from the blockchain, and are used as decoys.
+One of the five inputs will come from Alice's wallet, which will be consumed in the transaction.
+The other four inputs are arbitrarily picked from the blockchain, and are used as decoys.
 This forms a group of five possible signers, where all ring members are plausibly the actual signer of the transaction.
 To an outside observer, including to Bob himself, it's not clear which input was truly signed by Alice’s one-time spend key.
-However, with the key image, the network is able to securely confirm that the Monero being transfered to Bob has not been spent before.
+However, with the key image, the network is able to securely confirm that the Monero being transferred to Bob have not been spent before.
 As you can see, by using ring signatures, Monero protects the privacy of the sender by obscuring the source of inputs, and in doing so, ensures that the origin of any monero remains untraceable.
 
 ## 5) RingCT
