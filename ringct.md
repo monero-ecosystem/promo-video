@@ -1,7 +1,9 @@
 ## History:
 initial, Scoob (Apr. 2017)
 
-SamsungGalaxyPlayer - this one
+SamsungGalaxyPlayer
+
+JM - this one
 
 ## 1) - Intro
 
@@ -29,23 +31,39 @@ With Ring CT, transaction amounts are hidden, so denominations containing one si
 Up until mid-January 2017, third parties examining the blockchain could see the amounts transacted.  
 Those third parties wouldn't know the senders of transactions, due to ring signatures.
 And those third parties wouldn't know the recipients of the transactions, due to stealth addresses.
-But third parties did have the ability to know how much Monero was transacted between the two parties.
+But third parties did have the ability to know how much Monero was being moved.
 This led to some potential privacy leaks, as the same value may be transferred through multiple transactions.
 
 Beginning in mid-January 2017, RingCT became the default type of Monero transaction, and only a month later, over 98% of new transactions used RingCT.
 RingCT prevents third parties from knowing how much Monero is being transacted.
-After September 2017, the use of RingCT is mandatory to all Monero transactions.
+After September 2017, the use of RingCT will be mandatory for all Monero transactions.
 
 Now, let’s walk through an example to see how these concepts tie together.
 
 ## 4) – Ring Signatures Transaction
 
-Instead of using an entire input in a transaction, RingCT uses a fraction of each input that only the sender knows.
-Consequently, transactions were no longer broken down into different denominations as before.
+All the newly created monero are non-RCT and firstly reside in outputs with visible amount, so everyone can see the supply.
+First time a newly created monero is moved, that transaction converts it to RCT.
+Similarly, any old output must be converted to RCT first after which it can be combined in a ring signature with any other RCT output.
+Consequently, transactions no longer have to be broken down into different denominations as before.
+This means that your wallet is free to pick ring partners from all RCT outputs, significantly improving privacy.
 Let's take a deeper dive to see how a RingCT transaction works.
 
-Start with the one input you do control and want to send in a transaction. Imagine you have an input of 12.56 Monero and would like to send 2.5 Monero to your friend.
-With this input, you cryptographically commit to pay a certain value. To simplify this explanation, suppose you commit to pay the 2.5 Monero from your 12.56 Monero input, though the amount commited can be greater if you send an output back to yourself. This is called a Pedersen (pronounced pee-der-sen) Commitment.
+Imagine you have a RCT input of 12.56 Monero and would like to send 2.5 Monero to your friend.
+The transaction will then have one input of 12.56, and 2 outputs: one of 2.5 monero to your friend, and one of 10.06 back to your wallet as change output.
+Since monero outputs can't be spent from 2 times, you must always spend it entirely and return the change to yourself.
+With this input, you cryptographically commit to some amount without revealing it.
+With RCT, instead of revealing the values 12.56, 10.06, and 2.5, you cryptographically commit to them.
+The commitment will look like random numbers, but they actually have important features which ensures safety of the mechanism.
+To verify that no new money is created, the sum of inputs minus the sum of outputs must be 0.
+This is easy to check if you see the numbers.
+With commitments, it can be checked exactly the same way!
+The only difference is that you're summing some seemingly random numbers, but the sum must again be 0.
+The underlying cryptography guarantees that if the sum of commintment is 0, then also the sum of underlying masked values must be 0.
+This is called a Pedersen (pronounced pee-der-sen) commitment.
+The other important part is a range proof, which guarantees you don't commit to negative values with which you could cheat the sum to 0 and create new money.
+It cyptographically proves that amounts used in your transaction are greater than 0 and less than some arbitrary number.
+Monero uses Borromean signatures to achieve this.
 
 This commitment takes the form of this formula (rct = x*G + a*H(G)).
 The two most important variables to consider here are a and x.
