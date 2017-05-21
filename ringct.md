@@ -3,7 +3,7 @@ initial, Scoob (Apr. 2017)
 
 SamsungGalaxyPlayer
 
-JM - this one
+JM - this one, v2 - implementing kenshi84's comments
 
 ## 1) - Intro
 
@@ -22,11 +22,11 @@ Ring Confidential Transactions is commonly referred to as RingCT.
 
 ## 3) - The build-up to, and advent of, Ring CT
 
-From Monero's origin until mid-January 2017, Monero ring signatures were constructed by first breaking down the transactions' real input into separate denominations reflecting one significant digit each.  
-That is, if the sender owns a single output containing 12.5 Monero, the sender's wallet would first break it into a 10 Monero output, a 2 Monero output, and a 0.5 Monero output. 
-This technique ensured that there would be ample ring partners for nearly any transaction.
+From Monero's origin until mid-January 2017, Monero amounts had to be automatically split into denominations reflecting one significant digit each.
+That is, an amount of 12.5 Monero would never be kept in just one output, but it would be broken down into a 10 Monero output, a 2 Monero output, and a 0.5 Monero output.
+This technique ensured that there would be ample ring partners for nearly any transaction, as ring signature could ring together only outputs of the same value.
 To further enhance privacy, in mid-January 2017, Monero implemented RingCT.
-With Ring CT, transaction amounts are hidden, so denominations containing one significant digit became no longer important.
+With Ring CT, transaction amounts are hidden, so splitting into denominations is no longer neccessary.
 
 Up until mid-January 2017, third parties examining the blockchain could see the amounts transacted.  
 Those third parties wouldn't know the senders of transactions, due to ring signatures.
@@ -42,8 +42,8 @@ Now, let’s walk through an example to see how these concepts tie together.
 
 ## 4) – Ring Signatures Transaction
 
-All the newly created monero are non-RCT and firstly reside in outputs with visible amount, so everyone can see the supply.
-First time a newly created monero is moved, that transaction converts it to RCT.
+All the newly created monero firstly reside in outputs with visible amount, so everyone can see the supply.
+First time a newly created monero is moved, that transaction creates outputs with masked amounts.
 Similarly, any old output must be converted to RCT first after which it can be combined in a ring signature with any other RCT output.
 Consequently, transactions no longer have to be broken down into different denominations as before.
 This means that your wallet is free to pick ring partners from all RCT outputs, significantly improving privacy.
@@ -73,7 +73,7 @@ x is a random number acting as a mask, which your wallet software will generate 
 In the simplest sense, we can rewrite this equation as rct = a random value + a real value.
 
 You can publish the value rct to the rest of the network as an output, and the network can use this to verify that your transaction is legitimate. This can be used to verfy the sum of the inputs used in the transaction is the sum of the outputs.
-However, since an outside observer does not know what the variable x you generated earlier is, an outside observer has no way of knowing how much was spent in the transaction.
+However, since an outside observer does not know what the variable x you generated earlier is, he has no way of knowing how much was spent in the transaction.
 
 ## x) - The end?
 
