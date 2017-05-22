@@ -1,9 +1,11 @@
 ## History:
 initial, Scoob (Apr. 2017)
 
-SamsungGalaxyPlayer
+SamsungGalaxyPlayer - b0eefaa
 
-JM - this one, v2 - implementing kenshi84's comments
+JM - this one, v2 - implementing kenshi84's comments - ac43af6
+
+SamsungGalaxyPlayer - this one
 
 ## 1) - Intro
 
