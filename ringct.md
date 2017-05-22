@@ -57,8 +57,8 @@ The commitment will look like random numbers, but they actually have important f
 To verify that no new money is created, the sum of inputs must equal the sum of the outputs.
 This is easy to check if you see the numbers.
 With commitments, it can be checked exactly the same way!
-The only difference is that you're comparing seemingly random numbers, but they must still will be the same on both sides of the transaction.
-The underlying cryptography guarantees that if both numbers are the same, then the amount being sent is the same as the amount of funds available.
+The only difference is that you're comparing seemingly random numbers, but they can still be summed to check both sides of the transaction.
+The underlying cryptography guarantees that a check performed on commitments means that the amount being sent is the same as the amount of funds available.
 This is called a Pedersen (pronounced pee-der-sen) commitment.
 The other important part is a range proof, which guarantees you don't commit to negative values with which you could cheat and create new money.
 It cyptographically proves that amounts used in your transaction are greater than 0 and less than some arbitrary number.
