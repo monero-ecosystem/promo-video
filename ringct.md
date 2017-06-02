@@ -5,7 +5,7 @@ SamsungGalaxyPlayer - b0eefaa
 
 JM - this one, v2 - implementing kenshi84's comments - ac43af6
 
-SamsungGalaxyPlayer - <link pls>
+SamsungGalaxyPlayer - 0c27e6a
 
 Scoob - this one
 
