@@ -1,0 +1,29 @@
+Kovri Lightweight C++ I2P Router Script
+
+Version 1 - sgp
+
+Until this point, this video series has covered how Monero obfuscates information stored on the blockchain. However, personal information can also be leaked in the process of trying to get transactions there.
+
+Suppose Alice wants to send a transaction to Bob. She sets up the Monero transaction on her local device, and gets ready to tell the network of nodes and miners that she would like this transaction to be included in the next block.
+
+Alice is connected to several, but not all, of the nodes on the network. Her transaction request will need to reach as many nodes as possible, ideally all of them, for her to have the greatest chance of this transaction getting included in the next block. She is connected to 5 nodes on the network, and she sends all 5 her transaction request. These nodes then forward her request to all the nodes they are connected to, and so on until many nodes have this information.
+
+Unfortunately, Alice is taking a risk while sending out her transaction. Some nodes on the network may be logging the IP address that they get the transaction request from. An IP address is like your home address for your internet connection. An attacker does not know whether the first IP they receive the request from is the real sender, and they do not know any transaction information, such as the sender, amount, or receiver. However, the attacker could make an educated guess and associate a specific transaction, such as the one Alice created in this example, with an IP address.
+
+An attacker could then knock on Alice's door and demand that Alice hand over her private key so that they can find out more information. Alternatively, they could purposefully attempt to block her transaction from being broadcast to the rest of the network. This sort of attack is called a Sybil attack.
+
+What can be done to mitigate this? Alice does not know which nodes log her IP address, so she can't simply avoid the malicious nodes. Her only choice is to hide her IP address.
+
+There are several ways to hide your IP address, including with Tor, a trusted VPN, or I2P. We will focus on I2P in today's video, since this is the network that Kovri participates with.
+
+In a sentence, Kovri is a lightweight router written in C++, compatible with cryptocurrencies, and built for the I2P network. I2P is a layer of the internet that allows for all connections in the network to be private. Instead of connecting with participants directly, such as going directly to a website, all information is relayed through other I2P routers in the network. Since these routers know little or no information about the data they are sending, or where it originated and is ending up, all information in this network is private.
+
+Kovri will come bundled with future Monero releases, and it will be enabled by default to send the transaction broadcast through the I2P network.
+
+Now, when Alice sends her transaction request through I2P with the Kovri router, an attacker is no longer able to associate her transaction with her IP address. Nodes that log information will now get a meaningless .i2p address, which has no connection to Alice's real IP address. Thus, even if nodes continue to log information, they will not learn anything from passive surveillance.
+
+Furthermore, suppose Alice has an internet service provider that does not want her to use Monero. Alice can optionally send all the Monero sync data, not just the transaction broadcast, through I2P. Now, her ISP will not know that she is using Monero, improving Monero's censorship resistance.
+
+In summary, Kovri is a router that allows Monero users to connect to the private I2P network to send transaction requests anonymously. Nodes are no longer able to threaten users who create these transactions or block them from propagating across the network.
+
+To learn monero about Kovri, go to getkovri.org. To learn more about Monero, go to getmonero.org.
