@@ -11,7 +11,9 @@ Scoob - f8f54ad
 
 ajs - 018f931
 
-JM - this one - minor fixes
+JM - c6cf2b8
+
+anonimal - this one - minor fixes
 
 ## 1) - Intro
 
