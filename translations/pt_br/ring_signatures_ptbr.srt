@@ -1,0 +1,220 @@
+﻿1
+00:00:01,800 --> 00:00:05,700
+Monero é o dinheiro eletrônico seguro, não-rastreável e privado.
+
+2
+00:00:05,700 --> 00:00:09,600
+Ele é código aberto, descentralizado e de livre acesso a todos.
+
+3
+00:00:09,600 --> 00:00:13,600
+Nesse vídeo, vamos focar nas assinaturas em anel (ring signatures).
+
+4
+00:00:13,600 --> 00:00:18,200
+No último vídeo, vimos como os endereços sigilosos impedem as saídas financeiras
+
+5
+00:00:18,200 --> 00:00:20,700
+de serem associadas ao endereço público do destinatário.
+
+6
+00:00:20,800 --> 00:00:25,000
+Isso é possível com o uso de chaves públicas de destino e uso únicos.
+
+7
+00:00:25,000 --> 00:00:28,500
+Chaves públicas de uso único só podem ser usadas pelo destinatário,
+
+8
+00:00:28,500 --> 00:00:33,600
+e somente ele pode detectar sua saída financeira no blockchain.
+
+9
+00:00:33,600 --> 00:00:37,900
+Como todas as saídas não podem ser vinculadas, a privacidade do destinatário é garantida.
+
+10
+00:00:38,200 --> 00:00:40,160
+Do outro lado da transação, 
+
+11
+00:00:40,160 --> 00:00:43,900
+a privacidade do remetente é protegida com o uso das assinaturas em anel.
+
+12
+00:00:44,180 --> 00:00:48,900
+Assinatura em anel é um tipo de assinatura digital no qual um grupo de possíveis assinantes
+
+13
+00:00:48,900 --> 00:00:53,560
+são combinados a produzir uma nova assinatura que autoriza a transação.
+
+14
+00:00:53,740 --> 00:00:57,480
+Isso é análogo à assinatura de um cheque de uma conta conjunta,
+
+15
+00:00:57,480 --> 00:01:00,170
+mas com o verdadeiro assinante permanecendo desconhecido.
+
+16
+00:01:00,700 --> 00:01:03,800
+A assinatura digital é composta pelo assinante real
+
+17
+00:01:03,800 --> 00:01:08,500
+combinado com não-assinantes que formam o anel, onde todos os membros são iguais e válidos.
+
+18
+00:01:09,140 --> 00:01:12,000
+O verdadeiro assinante é uma chave de gasto única
+
+19
+00:01:12,000 --> 00:01:15,200
+que corresponde a uma saída financeira da carteira do remetente.
+
+20
+00:01:15,220 --> 00:01:18,800
+Os não-assinantes são as saídas financeiras de antigas transações do blockchain,
+
+21
+00:01:18,800 --> 00:01:20,800
+que funcionam como armadilha.
+
+22
+00:01:20,810 --> 00:01:24,000
+Essas saídas compõem as entradas de uma transação.
+
+23
+00:01:24,200 --> 00:01:30,300
+Para um terceiro, todas as entradas são igualmente prováveis de serem a saída gasta na transação.
+
+24
+00:01:30,300 --> 00:01:34,000
+Essa característica ajuda o remetente a esconder a origem da transação,
+
+25
+00:01:34,000 --> 00:01:37,200
+tornando as entradas indistinguíveis entre si.
+
+26
+00:01:37,900 --> 00:01:39,600
+Você deve estar se perguntando,
+
+27
+00:01:39,600 --> 00:01:43,560
+“se não há como um terceiro verificar qual saída está sendo gasta,
+
+28
+00:01:43,560 --> 00:01:46,760
+o que impediria que alguém gastasse a mesma saída duas vezes?”
+
+29
+00:01:46,980 --> 00:01:50,720
+Essa questão é abordada com o uso de “imagens-chave.”
+
+30
+00:01:50,820 --> 00:01:55,500
+Uma imagem-chave é uma chave criptográfica derivada de uma saída que está sendo gasta,
+
+31
+00:01:55,500 --> 00:01:58,280
+e faz parte de cada transação de assinatura em anel.
+
+32
+00:01:58,460 --> 00:02:02,400
+Existe somente uma imagem-chave para cada saída do blockchain,
+
+33
+00:02:02,400 --> 00:02:08,920
+mas devido às suas propriedades criptográficas, não é possível determinar qual saída criou qual imagem-chave.
+
+34
+00:02:08,940 --> 00:02:12,400
+Uma lista de todas as imagens-chave usadas é mantida no blockchain,
+
+35
+00:02:12,400 --> 00:02:15,990
+permitindo que os mineiros verifiquem que nenhuma saída é gasta duas vezes.
+
+36
+00:02:16,200 --> 00:02:19,400
+Vamos ver um exemplo de como tudo isso funciona.
+
+37
+00:02:20,000 --> 00:02:23,680
+Alice deseja enviar Monero para Bob em um anel de tamanho cinco.
+
+38
+00:02:23,780 --> 00:02:28,950
+Uma das cinco entradas vem da carteira da Alice, que será consumida na transação.
+
+39
+00:02:29,450 --> 00:02:32,850
+As outras quatro entradas foram selecionadas de forma arbitrária do blockchain,
+
+40
+00:02:32,850 --> 00:02:34,850
+e são usadas como armadilha.
+
+41
+00:02:34,850 --> 00:02:37,520
+Isso forma um grupo de cinco possíveis assinantes, 
+
+42
+00:02:37,520 --> 00:02:41,700
+onde todos os membros do anel são, plausivelmente, o assinante real da transação.
+
+43
+00:02:41,700 --> 00:02:44,950
+Para um observador externo, incluindo o próprio Bob,
+
+44
+00:02:44,950 --> 00:02:49,360
+não é claro qual entrada realmente foi assinada pela chave de uso único da Alice.
+
+45
+00:02:49,360 --> 00:02:53,480
+Porém, com a imagem-chave, a rede é capaz de confirmar com segurança
+
+46
+00:02:53,480 --> 00:02:57,700
+que o Monero enviado ao Bob não foi gasto anteriormente.
+
+47
+00:02:57,980 --> 00:03:03,200
+Como vimos, usando as assinaturas em anel, o Monero protege a privacidade do remetente
+
+48
+00:03:03,200 --> 00:03:06,440
+escondendo a fonte das entradas e, consequentemente,
+
+49
+00:03:06,440 --> 00:03:10,600
+garantindo que a origem de qualquer Monero permaneça não-rastreável.
+
+50
+00:03:11,500 --> 00:03:16,000
+Para aumentar a privacidade das duas partes, as Transações em Anéis Confidenciais,
+
+51
+00:03:16,000 --> 00:03:21,040
+chamadas de RingCT, foram implementadas para ocultar os valores das transações.
+
+52
+00:03:21,040 --> 00:03:24,800
+O RingCT traz algumas melhorias ao protocolo das assinaturas em anel.
+
+53
+00:03:25,000 --> 00:03:28,200
+Falaremos mais do RingCT no próximo vídeo.
+
+54
+00:03:28,600 --> 00:03:32,990
+Se você está interessado em saber mais do que faz o Monero a principal criptomoeda privada,
+
+55
+00:03:32,990 --> 00:03:37,160
+veja nossos outros vídeos ou visite getmonero.org.
+
