@@ -1,0 +1,72 @@
+﻿1
+00:00:00,300 --> 00:00:04,040
+Para a maioria das pessoas, privacidade financeira é muito importante,
+
+2
+00:00:04,040 --> 00:00:09,080
+mas bancos, grandes corporações e até governos têm seus registros comprometidos.
+
+3
+00:00:09,080 --> 00:00:14,580
+A inegável conclusão é que não há um local seguro para transações privadas.
+
+4
+00:00:14,580 --> 00:00:17,100
+Bom, não havia um... até agora!
+
+5
+00:00:17,100 --> 00:00:22,800
+Conheça o Monero: a moeda segura, privada e não-rastreável.
+
+6
+00:00:22,800 --> 00:00:26,000
+Com o Monero, você é o seu próprio banco.
+
+7
+00:00:26,000 --> 00:00:29,800
+Somente você controla e é responsável por seu próprio dinheiro.
+
+8
+00:00:29,800 --> 00:00:31,500
+Monero é privado:
+
+9
+00:00:31,550 --> 00:00:35,100
+isso significa que as empresas podem manter seus fornecedores em segredo.
+
+10
+00:00:35,100 --> 00:00:40,300
+Assim como cidadãos evitam a opressão dos governos, vizinhos entrometidos e bandidos.
+
+11
+00:00:40,300 --> 00:00:43,200
+Monero também pode ser seletivamente transparente,
+
+12
+00:00:43,200 --> 00:00:46,200
+e você escolhe quem pode ver as suas transações.
+
+13
+00:00:46,500 --> 00:00:51,010
+Monero é dinamicamente escalável, o que o faz muito diferente do Bitcoin.
+
+14
+00:00:51,010 --> 00:00:55,150
+Além disso, a recompensa dos blocos nunca cairá abaixo de 0.3 XMR,
+
+15
+00:00:55,150 --> 00:00:59,100
+e a inflação permanecerá em 0.3 XMR por minuto.
+
+16
+00:00:59,100 --> 00:01:01,100
+Monero é descentralizado,
+
+17
+00:01:01,100 --> 00:01:04,900
+e possui uma comunidade ativa com mais de 30 colaboradores.
+
+18
+00:01:04,900 --> 00:01:08,960
+Retome o controle de suas finanças e comece a usar Monero hoje.
+
