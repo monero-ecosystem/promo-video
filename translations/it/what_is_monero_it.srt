@@ -1,0 +1,54 @@
+﻿00:00:01,000 --> 00:00:04,000 To most people, financial privacy is very important
+Per molte persone la privacy finanziaria è molto importante 
+
+00:00:04,000 --> 00:00:09,000 But banks, big corporations, and even governments having their records compromised
+Ma banche, grandi corporazioni, e perfino governi, stanno avendo enormi problemi di sicurezza
+
+00:00:09,000 --> 00:00:14,000 The undeniable conclusion is there is no safe place to conduct private transactions
+L'innegabile conclusione è che non esiste un posto sicuro per effettuare transazioni private
+
+00:00:14,000 --> 00:00:17,000
+Beh...non ce n'era uno. Ti presento Monero!
+
+00:00:17,000 --> 00:00:22,000
+Monero è una moneta sicura, privata ed intracciabile
+
+00:00:22,000 --> 00:00:25,000
+Con Monero, tu sei la tua banca
+
+00:00:25,000 --> 00:00:28,000 
+Solo tu controlli e sei responsabile dei tuoi fondi
+
+00:00:28,000 --> 00:00:30,000 
+Monero è privato
+
+00:00:30,000 --> 00:00:34,000  
+Questo significa che le aziende possono tenere i loro fornitori segreti,
+
+00:00:34,000 --> 00:00:38,000 
+così come i cittadini possono aggirare repressioni governative, vicini curiosi o truffatori
+
+00:00:38,000 --> 00:00:41,000
+Monero può anche essere selettivamente trasparente
+
+00:00:41,000 --> 00:00:44,000
+e tu puoi scegliere chi può vedere le tue transazioni
+
+00:00:44,000 --> 00:00:48,000  
+Monero è dinamicamente scalabile, il che lo rende molto diverso da Bitcoin
+
+00:00:48,000 --> 00:00:53,000 
+Inoltre, la ricompensa per blocco non scenderà mai sotto 0.3 XMR
+
+00:00:53,000 --> 00:00:58,000 
+E l'inflazione nonimale rimarrà a 0.3 XMR al minuto
+
+00:00:58,000 --> 00:01:00,000 
+Monero è decentralizzato
+
+00:01:00,000 --> 00:01:05,000  
+Ha una comunità di sviluppatori attiva con più di 30 contributori
+
+00:01:05,000 --> 00:01:08,000 
+Riprendi il controllo delle tue finanze e inizia a usare Monero!
+
