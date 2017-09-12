@@ -1,9 +1,5 @@
 Kovri Lightweight C++ I2P Router Script
 
-Version 1 - sgp
-Version 2 - scoobs
-Version 3 - sgp
-
 Until this point, this video series has covered how Monero obfuscates information stored on the blockchain.
 Ring signatures obscure the sender.
 Stealth addressing prevents anyone but the sender and the recipient from knowing the recipient owns Monero.
