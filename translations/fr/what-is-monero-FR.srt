@@ -1,10 +1,10 @@
 ﻿1
 00:00:00,000 --> 00:00:01,010
-Aux avis de la plupart des gens
+D'après la plupart des gens
 
 2
 00:00:01,050 --> 00:00:03,550
-La confidentialité financière est très important
+la confidentialité financière est très importante
 
 3
 00:00:03,980 --> 00:00:05,180
@@ -12,7 +12,7 @@ mais les banques,
 
 4
 00:00:05,320 --> 00:00:06,320
-les enterprises,
+les grandes entreprises,
 
 5
 00:00:06,320 --> 00:00:07,690
@@ -20,101 +20,101 @@ et même les gouvernements
 
 6
 00:00:07,690 --> 00:00:09,690
-ont des problèmes de sécurité
+voient leurs dossiers compromis
 
 7
 00:00:09,990 --> 00:00:11,690
-Quand on voit ces problèmes de sécurité
+conclusion irréfutable
 
 8
 00:00:11,690 --> 00:00:13,030
-on croit naturellement qu'il n'existe aucune endroite
+qu'il n'existe aucun endroit sûr
 
 9
 00:00:13,330 --> 00:00:14,990
-où on peut stocker et expéditer notre argent
+où effectuer des transactions privées
 
 10
 00:00:14,990 --> 00:00:16,330
-c'est à cuase du fait que cet endroit n'existait pas
+ou plutôt, qu'il n'existait pas
 
 11
 00:00:16,330 --> 00:00:17,160
-jusq'à maintenant
+jusq'à maintenant.
 
 12
 00:00:17,160 --> 00:00:18,000
-mais maintenant, il existe Monero
+Découvrez Monero !
 
 13
 00:00:18,000 --> 00:00:19,430
-Monero est une crypto-monnaie complètement sécurisée
+Monero est une crypto-monnaie sécurisée,
 
 14
 00:00:19,430 --> 00:00:21,270
-complètement privée
+privée,
 
 15
 00:00:21,270 --> 00:00:23,340
-et comlètement introuvable
+et complètement intraçable.
 
 16
 00:00:23,670 --> 00:00:27,010
-Avec Monero, vous êtres le banquier de vous-même
+Avec Monero, vous êtes votre propre banque.
 
 17
 00:00:27,010 --> 00:00:29,010
-vous êtres le seul qui est responsable pour votre argent
+Vous êtes le seul responsable et au contrôle de votre argent !
 
 18
 00:00:29,010 --> 00:00:31,010
-MONERO EST PRIVÉ
+Monero est privé
 
 19
 00:00:31,010 --> 00:00:34,350
-Ça veut-dire que des enterprises peuvent garder leur fournisseurs en privé
+ce qui veut dire que des entreprises peuvent garder leurs fournisseurs secrêt,
 
 20
 00:00:35,010 --> 00:00:39,689
-Et des citoyens peuvent échapper à des gouvernement oppresifs ou des criminals
+et des citoyens peuvent échapper à des gouvernement répressifs ou criminels, des voisins trop curieux ou des escrocs.
 
 21
 00:00:40,857 --> 00:00:43,360
-Monero est aussi capable d'être "selectively transparent" (transparent par choix)
+Monero offre également une "transparence sélective",
 
 22
 00:00:43,360 --> 00:00:46,363
-Du coup, vous pouvez choisir ce qui a le droit de voir vos transactions
+et vous pouvez ainsi choisir qui a le droit de voir vos transactions.
 
 23
 00:00:46,363 --> 00:00:48,360
-Monero est évolutif
+Monero peut évoluer dynamiquement
 
 24
 00:00:48,360 --> 00:00:51,034
-Il est donc très différent du Bitcoin
+ce qui le rend très différent du Bitcoin.
 
 25
 00:00:51,034 --> 00:00:54,371
-Et en plus, la récompense de bloc ne serait jamais moins que 0.3 XMR
+Par ailleurs, la récompense du bloc ne descendra jamais en-dessous de 0.3 XMR
 
 26
 00:00:56,039 --> 00:00:58,375
-0.3 XMR par minute
+et l'inflation nominale restera de 0.3 XMR par minute.
 
 27
 00:00:58,375 --> 00:01:00,377
-Monero est decentralisé
+Monero est décentralisé
 
 28
 00:01:00,377 --> 00:01:03,880
-Monero a une communauté actif de plus que 30 contributeurs
+et possède une communauté de développement active avec plus de 30 contributeurs.
 
 29
 00:01:03,880 --> 00:01:06,383
-Reprendre le contrôle de vos finances.
+Reprenez le contrôle de vos finances et commencez à utilser Monero dès aujourd'hui !
 
 30
 00:01:06,383 --> 00:01:08,985
-EN SAVOIR PLUS À GETMONERO.ORG
+EN SAVOIR PLUS SUR GETMONERO.ORG
 
