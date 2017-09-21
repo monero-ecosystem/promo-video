@@ -41,11 +41,17 @@ In our last scenario, suppose Dave is an operator of a mining pool that donates 
 Other nodes could purposefully reject his solved blocks to express their disagreement with his political views.
 However, if Dave can send his solved blocks through Kovri, then no one can censor the new blocks created by his pool, since the source of solved blocks are unknown.
 
-## 5) - Conclusion
-
 As you can see, Kovri is a software that allows users to send transactions more privately and anonymously than ever before.
-Malicious nodes can no longer threaten users who create transactions or block them from propagating across the network.
+Let's next go over some fairly technical stuff to have a better understanding of how Kovri works under the hood.
+
+## 5) Kovri and Technical Attributes
+
+> **TODO**: Give a concise overview of garlic routing/encryption
+
+## 6) - Conclusion
+
 Kovri will revolutionize peer-to-peer connections and increase network resiliency and privacy worldwide.
+Malicious nodes can no longer threaten users who create transactions or block them from propagating across the network.
 It will come bundled with future Monero releases and be enabled by default.
 Kovri will also feature a common API that would allow other cryptocurrencies and applications to use it, not just Monero.
 
