@@ -6,10 +6,10 @@ Monero is secure, untraceable, electronic cash. It is open-source, decentralized
 
 Up to now, we have covered how Monero obfuscates information stored on the blockchain.
 Ring signatures obscure the sender.
-Stealth addresses prevent outside observers from knowing the destination of where Monero is sent to.
+Stealth addresses prevent outside observers from knowing the receiving address.
 And RingCT hides the amount of Monero that's transmitted.
 However, some personally identifiable information may be leaked at the network level when making a transaction.
-This privacy leak is fixed by a technology called Kovri.
+This privacy leak is addressed with technology called Kovri.
 
 ## 3) - The Term - Kovri
 
@@ -21,13 +21,13 @@ Let's go through a few scenarios to see how this lightweight, security-focused s
 
 ## 4) Examples
 
-Suppose Alice wants to send a transaction to Bob.
-She generates a transaction and in order for her transaction to have the greatest chance of being included in the next block, she needs to reach as many nodes as possible.
+Suppose Alice wants to send a transaction to Bob, and she beings the transaction.
+In order for her transaction to have the greatest chance of being included in the next block, she needs to reach as many nodes as possible.
 Alice connects to five nodes and these nodes then forward the transaction to other nodes, which in turn rebroadcast it repeatedly until many (or all) nodes in the network have this transaction.
-Unfortunately, Alice takes a risk in broadcasting her transaction.
+Unfortunately, Alice takes a risk when broadcasting her transaction.
 Some nodes may be logging IP addresses when transaction requests are received.
 Even though wallet addresses and the amount of Monero remain private, an attacker with enough resources could attempt to associate transactions with IP addresses to determine where transactions originate from.
-This could potentially lead to Alice receiving a knock on the door from Eve or her transaction being blocked from the rest of the network.
+This could potentially lead to an attacker knocking on Alice's door or blocking her transaction from the rest of the network.
 So what can Alice do to mitigate these threats? Well, she can use Kovri!
 If Alice sends her transaction with Kovri, nodes will no longer see her IP address, making passive surveillance tactics impractical.
 
@@ -46,7 +46,19 @@ Let's next go over some fairly technical stuff to have a better understanding of
 
 ## 5) Kovri and Technical Attributes
 
-> **TODO**: Give a concise overview of garlic routing/encryption
+Now hold on, since we are about to overview how Kovri works.
+
+Kovri is currently built from I2P's open standards. I2P stands for the invisible internet protocol. Kovri acts as an anonymizing router as it tunnels traffic through the I2P network.
+
+To protect their anonymity, each participant connects to other network members and uses them to pass messages.
+In most circumstances, people will choose four peers: two for incoming connections, and two for outgoing connections.
+People can use more for greater privacy at the cost of performance.
+
+Suppose Dave's mining pool has just solved a block and would like to send this transaction information to the other network members.
+Dave's router will send the message to his two outgoing peers, who will then search for the incoming peers of other nodes on the network.
+Dave can commincate securely without other Monero nodes on the network knowing what his actual IP address is.
+The other participants in the I2P network do not know what their place is in the chain of routing, nor do they know what information is being relayed inside the network.
+This is called garlic routing, wherein the only information shown to peers is the instruction set for sending to the next peer.
 
 ## 6) - Conclusion
 
