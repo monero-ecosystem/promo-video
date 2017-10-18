@@ -48,11 +48,11 @@ Let's next go over some fairly technical stuff to have a better understanding of
 
 Now hold on, since we are about to overview how Kovri works.
 
-Kovri is currently built from I2P's open standards. I2P stands for the invisible internet protocol. Kovri acts as an anonymizing router as it tunnels traffic through the I2P network.
+Kovri is currently built from I2P's open standards. I2P stands for the invisible internet project. Kovri acts as an anonymizing router as it tunnels traffic through the I2P network.
 
 To protect their anonymity, each participant connects to other network members and uses them to pass messages.
-In most circumstances, people will choose four peers: two for incoming connections, and two for outgoing connections.
-People can use more for greater privacy at the cost of performance.
+In most circumstances, people will choose several peers for incoming and outgoing connections.
+People can use more peers for greater privacy at the cost of performance.
 
 Suppose Dave's mining pool has just solved a block and would like to send this transaction information to the other network members.
 Dave's router will send the message to his two outgoing peers, who will then search for the incoming peers of other nodes on the network.
