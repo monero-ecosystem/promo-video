@@ -46,7 +46,26 @@ Let's next go over some fairly technical stuff to have a better understanding of
 
 ## 5) Kovri and Technical Attributes
 
-> **TODO**: Give a concise overview of garlic routing/encryption
+Currently based on the Invisible Internet Project's open specifications, Kovri uses both garlic encryption and garlic routing to create a private, protected overlay-network across the internet.
+This overlay-network provides Alice, Bob, Charlie, and Dave with the ability to effectively hide their geographical location and internet IP address from each other.
+Essentially, Kovri *covers* an application's internet traffic to make it anonymous within the network.
+
+TODO: to harsh a segue?
+
+Alice, Bob, Charlie, and Dave all have at least one thing in common: their IP addresses are exposed to each other.
+This means they all have the ability to log the geographical locations of every peer they connect to.
+Their only choice is to hide their IP address from each other.
+
+There are several ways for them to hide their IP addresses.
+They could use Tor, or they could use a trusted VPN; but both of these strategies have weaknesses.
+
+The Tor network has "semi-trusted" Directory Authorities which give a handful of Tor node operators overreaching influence into network consensus.
+Network consensus ultimately determines who is allowed to relay traffic on the Tor network based on the views of the Authorities.
+A design flaw that has yet to be fixed, Tor's Directory Authorities negatively affect decentralization and thus negatively affect decentralized applications.
+
+Another option of using a trusted VPN brings up the issue of trivial bandwidth correlation; making it easy for 3-letter agencies to de-anonymize a user's traffic.
+VPNs also adhere to local laws in order to stay in business; so Alice, Bob, Charlie, and Dave would always run the risk of having their user data given to a government whose policies they doesn't agree with.
+Most importantly, Trusted VPNs don't protect Bob from Alice knowing who Bob is, or Dave from Charlie, and so on. This means that no-one is truly hidden from one another when using a VPN.
 
 ## 6) - Conclusion
 
