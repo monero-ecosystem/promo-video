@@ -46,9 +46,7 @@ Let's next go over some fairly technical stuff to have a better understanding of
 
 ## 5) Kovri and Technical Attributes
 
-Now hold on, since we are about to overview how Kovri works.
-
-Kovri is currently built from I2P's open standards. I2P stands for the invisible internet project. Kovri acts as an anonymizing router as it tunnels traffic through the I2P network.
+Kovri is currently built from I2P's open standards. I2P stands for the invisible internet project. Kovri is as an anonymizing router which tunnels traffic through the I2P network.
 
 To protect their anonymity, each participant connects to other network members and uses them to pass messages.
 In most circumstances, people will choose several peers for incoming and outgoing connections.
