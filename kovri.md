@@ -6,10 +6,10 @@ Monero is secure, untraceable, electronic cash. It is open-source, decentralized
 
 Up to now, we have covered how Monero obfuscates information stored on the blockchain.
 Ring signatures obscure the sender.
-Stealth addresses prevent outside observers from knowing the destination of where Monero is sent to.
+Stealth addresses prevent outside observers from knowing the receiving address.
 And RingCT hides the amount of Monero that's transmitted.
 However, some personally identifiable information may be leaked at the network level when making a transaction.
-This privacy leak is fixed by a technology called Kovri.
+This privacy leak is addressed with technology called Kovri.
 
 ## 3) - The Term - Kovri
 
@@ -21,13 +21,13 @@ Let's go through a few scenarios to see how this lightweight, security-focused s
 
 ## 4) Examples
 
-Suppose Alice wants to send a transaction to Bob.
-She generates a transaction and in order for her transaction to have the greatest chance of being included in the next block, she needs to reach as many nodes as possible.
+Suppose Alice wants to send a transaction to Bob, and she beings the transaction.
+In order for her transaction to have the greatest chance of being included in the next block, she needs to reach as many nodes as possible.
 Alice connects to five nodes and these nodes then forward the transaction to other nodes, which in turn rebroadcast it repeatedly until many (or all) nodes in the network have this transaction.
-Unfortunately, Alice takes a risk in broadcasting her transaction.
+Unfortunately, Alice takes a risk when broadcasting her transaction.
 Some nodes may be logging IP addresses when transaction requests are received.
 Even though wallet addresses and the amount of Monero remain private, an attacker with enough resources could attempt to associate transactions with IP addresses to determine where transactions originate from.
-This could potentially lead to Alice receiving a knock on the door from Eve or her transaction being blocked from the rest of the network.
+This could potentially lead to an attacker knocking on Alice's door or blocking her transaction from the rest of the network.
 So what can Alice do to mitigate these threats? Well, she can use Kovri!
 If Alice sends her transaction with Kovri, nodes will no longer see her IP address, making passive surveillance tactics impractical.
 
@@ -45,6 +45,18 @@ As you can see, Kovri is a software that allows users to send transactions more 
 Let's next go over some fairly technical stuff to have a better understanding of how Kovri works under the hood.
 
 ## 5) Kovri and Technical Attributes
+
+Kovri is currently built from I2P's open standards. I2P stands for the invisible internet project. Kovri is as an anonymizing router which tunnels traffic through the I2P network.
+
+To protect their anonymity, each participant connects to other network members and uses them to pass messages.
+In most circumstances, people will choose several peers for incoming and outgoing connections.
+People can use more peers for greater privacy at the cost of performance.
+
+Suppose Dave's mining pool has just solved a block and would like to send this transaction information to the other network members.
+Dave's router will send the message to his two outgoing peers, who will then search for the incoming peers of other nodes on the network.
+Dave can commincate securely without other Monero nodes on the network knowing what his actual IP address is.
+The other participants in the I2P network do not know what their place is in the chain of routing, nor do they know what information is being relayed inside the network.
+This is called garlic routing, wherein the only information shown to peers is the instruction set for sending to the next peer.
 
 Currently based on the Invisible Internet Project's open specifications, Kovri uses both garlic encryption and garlic routing to create a private, protected overlay-network across the internet.
 This overlay-network provides Alice, Bob, Charlie, and Dave with the ability to effectively hide their geographical location and internet IP address from each other.
@@ -66,6 +78,7 @@ A design flaw that has yet to be fixed, Tor's Directory Authorities negatively a
 Another option of using a trusted VPN brings up the issue of trivial bandwidth correlation; making it easy for 3-letter agencies to de-anonymize a user's traffic.
 VPNs also adhere to local laws in order to stay in business; so Alice, Bob, Charlie, and Dave would always run the risk of having their user data given to a government whose policies they doesn't agree with.
 Most importantly, Trusted VPNs don't protect Bob from Alice knowing who Bob is, or Dave from Charlie, and so on. This means that no-one is truly hidden from one another when using a VPN.
+
 
 ## 6) - Conclusion
 
