@@ -24,28 +24,18 @@ An IP address is like a home address for the Internet, so this is quite sensitiv
 Let's go through a few scenarios to see how this lightweight, security-focused software helps strengthen the unique privacy properties of Monero.
 
 Suppose Alice wants to send Monero to Bob.
-Alice's wallet creates a transaction, which then asks her daemon (her node) to broadcast it to the Monero network.
-Alice's node is connected to several nodes run by network peers, so those peers are first to receive a broadcast of her transaction.
-Those peers have peers of their own, to which they rebroadcast Alice's transaction.
-This process repeats until most - or all - nodes on the Monero network have Alice's transaction.
-
-In order for this relaying of transactions to occur, nodes must be able to communicate with one another.
-Nodes communicate by directing messages to the intended recipients using the recipient's IP address.
-Nearly all communications between computers are accomplished the same way.
+Alice's wallet creates a transaction, and then asks her node to broadcast it to the Monero network.
+Alice's node is connected to several nodes run by network peers, so those peers are first to receive a broadcast of her transaction, which then rebroadcast her transaction to their peers, etc.
+Nodes communicate by directing messages to their peers using the peers' IP addresses.
 This means that it is possible to geographically trace data as it travels the internet, from start to finish and everywhere in between.
 
-Back to Alice, we now see that she is taking a risk by broadcasting her transaction.
+It is therefore evident that Alice is taking a risk by broadcasting her transaction.
 Some nodes may be logging IP addresses when transactions are received.
 Every one of Alice's node's network peers knows her IP address; therefore, each one of those peers has the ability to keep track of when a new transaction was first broadcast to them by Alice's node.
 
 Since Monero nodes tend to connect to only a limited number of peers, a transaction broadcast by Alice's node is not a conclusive indicator that Alice has initiated a transaction.
 And, even though the sender's and recipient's wallet addresses - as well as the amount of Monero sent - remain private, an adversary with enough resources could attempt to associate transactions with IP addresses to determine from where transactions originate.
 This could potentially lead to an adversary not relaying her transactions to the rest of the network; or - worse - arriving at her front door.
-
-What can Alice do to mitigate these threats? 
-She can use Kovri!
-If Alice uses Kovri to broadcast her transactions, no one will know the source of her transactions.
-Additionally, if she connects to the Monero network exclusively over Kovri, her peers will no longer see her IP address, making passive surveillance tactics impractical.
 
 Now let’s imagine a different scenario.
 Suppose Charlie wants to support the Monero network by running a full node at his home.
@@ -60,8 +50,9 @@ The Tor network has "semi-trusted" Directory Authorities which give a handful of
 Network consensus ultimately determines who is allowed to relay traffic on the Tor network based on the views of the Authorities.
 Furthermore, correlation attacks are possible with VPNs, making it easy for large attackers to de-anonymize a user's traffic.
 
-So what can Alice, Bob, Charlie, and Dave do to mitigate these threats? Well, they could simply use Kovri!
-With Kovri, nodes will no longer be able to see IP addresses, making passive surveillance tactics impractical.
+So what can Alice, Bob, Charlie, and Dave do to mitigate these threats? They could use Kovri!
+If Alice uses Kovri to broadcast her transactions, no one will know the source of her transactions.
+Additionally, if they connect to the Monero network exclusively over Kovri, their peers will no longer see their IP addresses, making passive surveillance tactics impractical.
 Furthermore, the source of solved blocks are unknown when transmitted through Kovri, which will substantially improve Monero's censorship resistance.
 
 As you can see, Kovri is a software that allows users to send transactions more privately and anonymously than ever before.
