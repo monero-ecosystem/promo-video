@@ -41,7 +41,7 @@ Alice, Bob, Charlie, and Dave all have at least one thing in common: their IP ad
 Users could try to hide IP addresses with Tor or a VPN; however both of these strategies have serious weaknesses.
 The Tor network has "semi-trusted" Directory Authorities which give a handful of Tor node operators overreaching influence into network consensus.
 Network consensus ultimately determines who is allowed to relay traffic on the Tor network based on the views of the Authorities.
-Furthermore, correlation attacks are possible with VPNs, making it easy for large attackers to de-anonymize a user's traffic.
+Furthermore, correlation attacks are easily possible with trusted VPNs, making it easy for large attackers to de-anonymize a user's traffic.
 
 So what can Alice, Bob, Charlie, and Dave do to mitigate these threats? They could use Kovri!
 If they exclusively use Kovri to connect to the Monero network, no one will know their IP address, making passive surveillance impractical, while substantially improving Monero's censorship resistance.
@@ -57,7 +57,8 @@ For each inner doll there is a lock and public key to the next doll.
 Peers in the network are not able to read the contents of the message being relayed, so information sent from the sender to its destination (and vice-versa) are secured.
 The only information visible to peers is the instruction for sending messages to the next peer.
 To achieve greater privacy at a slight cost to performance, users are able to connect to several peers.
-Essentially, Kovri covers an application's internet traffic to make it anonymous within the network.
+Essentially, Kovri covers an application's Internet traffic to make it anonymous within the network.
+Given this characteristic, Kovri is a great solution for anonymously communicating over IRC, email, or accessing hidden services.
 
 ## 6) - Conclusion
 
@@ -65,6 +66,5 @@ Kovri will revolutionize peer-to-peer connections and increase network resilienc
 Malicious nodes can no longer threaten users who create transactions or block them from propagating across the network.
 Kovri will come bundled with future Monero releases and be enabled by default.
 In addition, Kovri will feature a common API that would allow other cryptocurrencies and applications to use it, not just Monero.
-For instance, chatting over IRC or visiting eepSites via the I2P network will be possible with Kovri APIs.
 
 To learn more about Monero and the Kovri project, check out getmonero.org. and getkovri.org.
