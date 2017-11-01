@@ -25,10 +25,10 @@ Let's go through a few scenarios to see how this lightweight, security-focused s
 Suppose Alice wants to send Monero to Bob.
 Alice's wallet creates a transaction and then broadcasts it to the Monero network.
 The Monero network is made up of nodes that communicate with each other by directing messages using IP addresses.
-This means that it might be possible to geographically trace data as it travels over the open internet, from start to finish and everywhere in between.
+This means that it might be possible to geographically trace data as it travels over the open Internet, from start to finish and everywhere in between.
 Even though the sender's and recipient's wallet addresses - as well as the amount of Monero sent - remain private, Alice is taking a risk in broadcasting her transaction as some nodes may be logging IP addresses.
 An adversary with enough resources could attempt to associate transactions with IP addresses to determine from where transactions originate.
-This could potentially lead to the adversary arriving at her front door.
+This could potentially lead to an adversary not relaying her transactions to the rest of the network; or - worse - arriving at her front door.
 
 Now let’s imagine a different scenario.
 Suppose Charlie wants to support the Monero network by running a full node at his home.
@@ -44,7 +44,7 @@ Network consensus ultimately determines who is allowed to relay traffic on the T
 Furthermore, correlation attacks are possible with VPNs, making it easy for large attackers to de-anonymize a user's traffic.
 
 So what can Alice, Bob, Charlie, and Dave do to mitigate these threats? They could use Kovri!
-If they use Kovri to exclusively connect to the Monero network, no one will know their IP address, making passive surveillance impractical while substantially improving Monero's censorship resistance.
+If they exclusively use Kovri to connect to the Monero network, no one will know their IP address, making passive surveillance impractical, while substantially improving Monero's censorship resistance.
 
 As you can see, Kovri is a software that allows users to send transactions more privately than ever before.
 Let's next go over some technical details to have a better understanding of how Kovri works under the hood. 
