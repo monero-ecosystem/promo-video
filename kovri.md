@@ -32,7 +32,7 @@ This could potentially lead to an adversary not relaying her transactions to the
 
 Now let’s imagine a different scenario.
 Suppose Charlie wants to support the Monero network by running a full node at his home.
-After a few weeks, he receives a cease and desist letter from his Internet Service Provider informing him that running a node is a violation of the terms of service.
+After a few weeks, he receives a cease and desist letter from his Internet Service Provider claiming that running a node is a violation of the terms of service.
 
 Or consider this, suppose Dave is an operator of a mining pool that donates a portion of block rewards to a political party or controversial cause.
 Other nodes could purposefully reject his solved blocks to express their disagreement with his political or social views.
