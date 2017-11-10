@@ -1,6 +1,6 @@
 ## 1) - Intro
 
-Monero is secure, untraceable, electronic cash. It is open-source, decentralized, and freely accessible to all. In this video, we will focus on an anonymity technology, called Kovri.
+Monero is secure, untraceable, electronic cash. It is open-source, decentralized, and available for anyone to use. In this video, we will focus on an anonymity technology, called Kovri.
 
 ## 2) - Technology recap
 
@@ -8,15 +8,15 @@ Up to now, we have covered how Monero obfuscates information stored on the block
 Ring signatures obscure the sender.
 Stealth addresses prevent outside observers from knowing the receiving address.
 And RingCT hides the amount of Monero that's transmitted.
-However, some personally identifiable information may be leaked at the network level when making a transaction.
-This privacy leak is addressed with Kovri.
+However, some personally identifiable information may be revealed on the network level when making a transaction.
+This privacy concern is addressed with Kovri.
 
 ## 3) - The Term - Kovri
 
-Kovri is a free, decentralized, anonymity technology based on I2P's open specifications.
-Kovri uses both encryption and sophisticated routing techniques to create a private overlay-network across the Internet.
-This protected overlay allows users to hide their geographical location and IP address.
-An IP address is like a home address for the Internet, so this is quite sensitive information, to say the least.
+Kovri is a free and decentralized technology for anonymous communication based on the open specifications of I2P.
+Kovri uses encryption and sophisticated routing to create a private network overlayed over the open Internet that does not reveal IP addresses.
+An IP address may uniquely identify a computer on the internet, and can sometimes be linked to specific people, organizations, or or geographical locations, so it can be considered quite sensitive information.
+Kovri hides the IP address, and therefore the identity or geographical location of users.
 
 ## 4) Examples
 
