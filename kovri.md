@@ -1,6 +1,6 @@
 ## 1) - Intro
 
-Monero is secure, untraceable, electronic cash. It is open-source, decentralized, and available for anyone to use. In this video, we will focus on an anonymity technology, called Kovri.
+Monero is secure, untraceable, electronic cash. It is open-source, decentralized, and freely accessible to all. In this video, we will focus on an anonymity technology, called Kovri.
 
 ## 2) - Technology recap
 
@@ -13,9 +13,9 @@ This privacy concern is addressed with Kovri.
 
 ## 3) - The Term - Kovri
 
-Kovri is a free and decentralized technology for anonymous communication based on the open specifications of I2P.
-Kovri uses encryption and sophisticated routing to create a private network overlayed over the open Internet that does not reveal IP addresses.
-An IP address may uniquely identify a computer on the internet, and can sometimes be linked to specific people, organizations, or or geographical locations, so it can be considered quite sensitive information.
+Kovri is a free, decentralized, anonymity technology based on I2P's open specifications.
+Kovri uses both encryption and sophisticated routing techniques to create a private overlay-network across the Internet.
+An IP address uniquely identifys a computer or device on the internet, and can sometimes be linked to specific people, organizations, or or geographical locations, so it can be considered something a person would want to keep private.
 Kovri hides the IP address, and therefore the identity or geographical location of users.
 
 ## 4) Examples
