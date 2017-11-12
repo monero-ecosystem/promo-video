@@ -8,15 +8,15 @@ Up to now, we have covered how Monero obfuscates information stored on the block
 Ring signatures obscure the sender.
 Stealth addresses prevent outside observers from knowing the receiving address.
 And RingCT hides the amount of Monero that's transmitted.
-However, some personally identifiable information may be leaked at the network level when making a transaction.
-This privacy leak is addressed with Kovri.
+However, some personally identifiable information may be revealed on the network level when making a transaction.
+This privacy concern is addressed with Kovri.
 
 ## 3) - The Term - Kovri
 
 Kovri is a free, decentralized, anonymity technology based on I2P's open specifications.
 Kovri uses both encryption and sophisticated routing techniques to create a private overlay-network across the Internet.
-This protected overlay allows users to hide their geographical location and IP address.
-An IP address is like a home address for the Internet, so this is quite sensitive information, to say the least.
+An IP address uniquely identifys a computer or device on the internet, and can sometimes be linked to specific people, organizations, or or geographical locations, so it can be considered something a person would want to keep private.
+Kovri hides the IP address, and therefore the identity or geographical location of users.
 
 ## 4) Examples
 
