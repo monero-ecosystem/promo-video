@@ -1,0 +1,194 @@
+0:00:00.000,0:00:00.940
+Monero
+
+0:00:01.080,0:00:02.180
+ist sicheres,
+
+0:00:02.360,0:00:03.220
+nicht nachverfolgbares,
+
+0:00:03.340,0:00:04.620
+elektronisches Bargeld.
+
+0:00:04.620,0:00:05.680
+Es ist open-source,
+
+0:00:05.680,0:00:06.780
+dezentral
+
+0:00:06.940,0:00:08.460
+und frei zugänglich für alle.
+
+0:00:09.000,0:00:11.840
+In diesem Video werden wir uns auf Tarnadressen (Stealth Addresses) konzentrieren.
+
+0:00:12.240,0:00:13.860
+Lassen Sie uns einen Schritt zurückgehen
+
+0:00:13.960,0:00:15.960
+und kurz einige Konzepte aus dem vorherigen Video wiederholen.
+
+0:00:16.440,0:00:20.000
+Wir haben gelernt, dass Monero ein verteiltes Peer-to-Peer-Konsensnetzwerk verwendet,
+
+0:00:20.200,0:00:23.340
+um Transaktionsoutputs in einer Blockchain zu erfassen.
+
+0:00:23.540,0:00:25.240
+Falls Alice Monero besitzt,
+
+0:00:25.340,0:00:29.140
+bedeutet dies, dass Sie die alleinige Kontrolle über einige dieser Outputs hat.
+
+0:00:29.280,0:00:30.900
+Wenn Alice Monero an Bob schickt,
+
+0:00:30.960,0:00:32.600
+dann verkündet Alice dem Netzwerk,
+
+0:00:32.620,0:00:37.920
+dass sie den Wert von einigen ihrer Outputs auf einen ganz neuen Output für Bob übertragen will,
+
+0:00:38.060,0:00:40.220
+den nur er kontrollieren kann.
+
+0:00:40.220,0:00:41.100
+Mit anderen Worten
+
+0:00:41.100,0:00:44.680
+ist eine Transaktion die Umwandlung alter Outputs, die zu einer Wallet gehören,
+
+0:00:44.740,0:00:47.540
+in neue Outputs, die zu einer anderen angehören.
+
+0:00:47.600,0:00:49.380
+Gehen wir noch einen Schritt weiter,
+
+0:00:49.380,0:00:52.360
+um zu sehen, wie Tarnadressen die Privatsphäre eines Benutzers verbessern.
+
+0:00:52.860,0:00:58.580
+Bei jeder Transaktion wird automatisch eine Tarnadresse, auch als einmaliger öffentlicher Schlüssel bekannt, erstellt
+
+0:00:58.580,0:01:00.240
+und als Teil der Transaktion festgehalten,
+
+0:01:00.240,0:01:04.160
+um anzugeben, wer einen Output bei einer späteren Transaktion ausgeben kann.
+
+0:01:04.160,0:01:07.785
+Ein externer Beobachter kann weder sagen, ob Geld von Alice zu Bob fließt,
+
+0:01:07.785,0:01:09.940
+noch Wallet-Adressen miteinander verknüpfen,
+
+0:01:10.020,0:01:11.480
+einfach indem er sich die Blockchain ansieht.
+
+0:01:11.840,0:01:14.180
+Wenn Alice also Monero an Bob schickt,
+
+0:01:14.180,0:01:18.880
+wird der von Bob erhaltene Output nicht öffentlich Bobs Wallet-Adresse zugeordnet.
+
+0:01:18.880,0:01:23.040
+Falls Alice allerdings jemals beweisen muss, dass sie tatsächlich Monero an Bob geschickt hat,
+
+0:01:23.040,0:01:26.340
+kann ihre Wallet belegen, dass die Zahlung getätigt wurde.
+
+0:01:26.740,0:01:29.260
+Bob kann versichert sein, dass niemand sonst sehen kann,
+
+0:01:29.260,0:01:32.080
+wann oder ob irgendein Monero zu ihm geschickt wurde.
+
+0:01:32.360,0:01:35.160
+Wenn Bob ein Händler wäre, wäre diese Funktionalität ein großer Vorteil,
+
+0:01:35.300,0:01:38.400
+denn niemand kann sagen, wie viele verschiedene Kunden er hat,
+
+0:01:38.440,0:01:40.800
+ob es sich dabei um Stammkunden handelt
+
+0:01:40.800,0:01:43.520
+oder ob er überhaupt Kunden hat.
+
+0:01:43.620,0:01:47.480
+Schnallen Sie sich jetzt an, denn wir sind im Begriff, ein paar ziemlich technische Dinge zu besprechen.
+
+0:01:47.880,0:01:50.900
+Eine Monero-Wallet-Adresse ist ein 95-stelliger String,
+
+0:01:50.900,0:01:52.980
+der aus einem öffentlichen Betrachtungsschlüssel (View Key)
+
+0:01:52.980,0:01:54.500
+und einem öffentlichen Ausgabeschlüssel (Spend Key) besteht.
+
+0:01:54.740,0:01:56.660
+Wenn Alice Bob Monero schickt,
+
+0:01:56.660,0:01:59.480
+wird Alice' Wallet Bobs öffentlichen Betrachtungsschlüssel
+
+0:01:59.480,0:02:00.860
+und öffentlichen Ausgabeschlüssel
+
+0:02:00.860,0:02:02.400
+sowie einige Zufallsdaten verwenden,
+
+0:02:02.400,0:02:06.180
+um einen eindeutigen einmaligen öffentlichen Schlüssel für Bobs neuen Output zu erzeugen.
+
+0:02:06.180,0:02:09.280
+Jeder kann den einmaligen öffentlichen Schlüssel auf der Blockchain sehen,
+
+0:02:09.280,0:02:12.780
+aber nur Alice und Bob wissen, dass Alice Monero zu Bob geschickt hat.
+
+0:02:13.200,0:02:17.760
+Der Output wird so erstellt, dass Bob in der Lage ist, den für ihn bestimmten Output zu lokalisieren,
+
+0:02:17.760,0:02:20.740
+indem er die Blockchain mit dem privaten Betrachtungsschlüssel seiner Wallet durchsucht.
+
+0:02:20.980,0:02:23.880
+Sobald der Output von Bobs Wallet ermittelt und abgerufen wurde,
+
+0:02:23.880,0:02:27.380
+könnte er einen einmaligen privaten Schlüssel errechnen,
+
+0:02:27.380,0:02:29.560
+der zum einmaligen öffentlichen Schlüssel passt,
+
+0:02:29.560,0:02:33.500
+und den entsprechenden Output mit dem privaten Ausgabeschlüssel seiner Wallet ausgeben.
+
+0:02:33.720,0:02:36.840
+Dieser gesamte Prozess erfolgt, ohne dass jemals Bobs Wallet-Adresse
+
+0:02:36.840,0:02:39.680
+öffentlich mit irgendeiner Transaktion in Verbindung gebracht wird.
+
+0:02:39.880,0:02:44.440
+Wie Sie sehen können, verhindern Tarnadressen, dass man Outputs Wallet-Adressen zuordnen kann.
+
+0:02:44.580,0:02:47.860
+Die Privatsphäre des Senders wird durch die Verwendung von Ringsignaturen geschützt.
+
+0:02:47.860,0:02:51.600
+Ringsignaturen helfen, den Ursprung der Outputs zu verschleiern.
+
+0:02:51.600,0:02:55.820
+In unserem nächsten Video werden wir das Konzept der Ringsignatur näher behandeln
+
+0:02:55.820,0:02:59.740
+und sehen, wie diese Funktionalität Monero nicht nachverfolgbar macht.
+
+0:02:59.920,0:03:04.200
+Wenn Sie interessiert daran sind, was Monero zur führenden privatsphärezentrierten Kryptowährung macht,
+
+0:03:04.200,0:03:08.380
+sehen Sie sich gerne die anderen Videos an oder besuchen Sie getmonero.org.
