@@ -68,7 +68,7 @@ Now, buckle your seatbelts, because we are about to go over some fairly technica
 
 ## 4) - One-time Destinations
 
-A Monero wallet address is a 95-character string, which consists of a public view key and a public spend key.
+A Monero wallet address is a 95-character string, which consists of a public view key and a public s[p]end key.
 When Alice sends Monero to Bob, Alice’s wallet will use Bob’s public view key and public spend key as well as some random data to generate a unique one-time public key for Bob’s new output. 
 Everyone can see the one-time public key on the blockchain, but only Alice and Bob know that Alice sent Monero to Bob.
 The output is created in such a way that Bob is able to locate the output destined for him by scanning the blockchain with his wallet’s private view key.

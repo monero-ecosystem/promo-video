@@ -38,7 +38,7 @@ Or consider this, suppose Dave is an operator of a mining pool that donates a po
 Other nodes could purposefully reject his solved blocks to express their disagreement with his political or social views.
 
 Alice, Bob, Charlie, and Dave all have at least one thing in common: their IP addresses were exposed.
-Users could try to hide IP addresses with Tor or a VPN; however both of these strategies have serious weaknesses.
+Users could try to hide IP addresses with the Tor or a VPN; however both of these strategies have serious weaknesses.
 The Tor network has "semi-trusted" Directory Authorities which give a handful of Tor node operators overreaching influence into network consensus.
 Network consensus ultimately determines who is allowed to relay traffic on the Tor network based on the views of the Authorities.
 Furthermore, correlation attacks are easily possible with trusted VPNs, making it easy for large attackers to de-anonymize a user's traffic.
