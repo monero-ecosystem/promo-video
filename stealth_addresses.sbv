@@ -1,0 +1,182 @@
+0:00:00.000,0:00:04.420
+Monero is secure, untraceable, electronic cash.
+
+0:00:04.420,0:00:08.700
+It is open-source, decentralized, and freely accessible to all.
+
+0:00:08.700,0:00:11.600
+In this video, we will focus on stealth addresses.
+
+0:00:11.600,0:00:15.860
+Let's take a step back, and recap some concepts from the previous video.
+
+0:00:15.860,0:00:20.420
+We learned that Monero uses a distributed peer-to-peer consensus network
+
+0:00:20.420,0:00:22.860
+to record transaction outputs in a blockchain.
+
+0:00:22.860,0:00:25.020
+If Alice owns Monero,
+
+0:00:25.020,0:00:28.320
+it means that she has exclusive control over some of these outputs.
+
+0:00:28.320,0:00:30.680
+When Alice sends Monero to Bob,
+
+0:00:30.680,0:00:32.340
+Alice is announcing to the network
+
+0:00:32.340,0:00:35.460
+that she wishes to transfer the value of some of her outputs
+
+0:00:35.460,0:00:37.300
+to a brand new output for Bob,
+
+0:00:37.300,0:00:39.400
+which only he can control.
+
+0:00:39.400,0:00:40.940
+In other words,
+
+0:00:40.940,0:00:44.680
+a transaction is the transformation of old outputs belonging to one wallet
+
+0:00:44.680,0:00:46.800
+into new outputs belonging to another.
+
+0:00:46.800,0:00:48.800
+Let's take this a step further,
+
+0:00:48.800,0:00:51.860
+to see how stealth addresses enhance a user’s privacy.
+
+0:00:51.860,0:00:53.880
+In every transaction,
+
+0:00:53.880,0:00:57.000
+a stealth address, also known as a one-time public key,
+
+0:00:57.000,0:01:00.680
+is automatically generated and recorded as part of the transaction
+
+0:01:00.680,0:01:03.700
+to indicate who can spend an output in a later transaction.
+
+0:01:03.700,0:01:08.000
+An outside observer cannot tell if funds are moving from Alice to Bob
+
+0:01:08.000,0:01:11.340
+nor link wallet addressees together by just looking at the blockchain.
+
+0:01:11.340,0:01:14.080
+Therefore, when Alice sends Monero to Bob,
+
+0:01:14.080,0:01:18.640
+the output Bob receives will not be publicly associated with Bob’s wallet address.
+
+0:01:18.640,0:01:23.040
+However, if Alice ever needs to prove that she in fact sent Monero to Bob,
+
+0:01:23.040,0:01:26.260
+her wallet has the ability to verify that payment was sent.
+
+0:01:26.260,0:01:31.640
+Bob can rest assured that no one else can see when or if any Monero was sent to him.
+
+0:01:31.640,0:01:35.260
+If Bob were a merchant, this feature would be a great benefit,
+
+0:01:35.260,0:01:38.080
+because no one can tell how many different customers he has,
+
+0:01:38.080,0:01:40.240
+whether any of them are repeat customers,
+
+0:01:40.240,0:01:42.820
+or if he has any customers at all.
+
+0:01:42.820,0:01:44.680
+Now, buckle your seatbelts,
+
+0:01:44.680,0:01:47.360
+because we are about to go over some fairly technical stuff.
+
+0:01:47.360,0:01:51.060
+A Monero wallet address is a 95-character string,
+
+0:01:51.060,0:01:54.460
+which consists of a public view key and a public s[p]end key.
+
+0:01:54.460,0:01:56.700
+When Alice sends Monero to Bob,
+
+0:01:56.700,0:02:00.700
+Alice’s wallet will use Bob’s public view key and public spend key
+
+0:02:00.700,0:02:02.440
+as well as some random data
+
+0:02:02.440,0:02:05.660
+to generate a unique one-time public key for Bob’s new output.
+
+0:02:05.660,0:02:09.200
+Everyone can see the one-time public key on the blockchain,
+
+0:02:09.200,0:02:12.820
+but only Alice and Bob know that Alice sent Monero to Bob.
+
+0:02:12.820,0:02:15.120
+The output is created in such a way
+
+0:02:15.120,0:02:17.620
+that Bob is able to locate the output destined for him
+
+0:02:17.620,0:02:20.620
+by scanning the blockchain with his wallet’s private view key.
+
+0:02:20.620,0:02:24.180
+Once the output is detected and retrieved by Bob’s wallet,
+
+0:02:24.180,0:02:27.180
+he would be able to calculate a one-time private key
+
+0:02:27.180,0:02:29.580
+that corresponds with the one-time public key
+
+0:02:29.580,0:02:33.060
+and spend the relevant output with his wallet’s private spend key.
+
+0:02:33.060,0:02:34.840
+This whole process occurs
+
+0:02:34.840,0:02:36.680
+without ever having Bob’s wallet address
+
+0:02:36.680,0:02:38.940
+publically linked to any transaction.
+
+0:02:38.940,0:02:40.720
+As you can see,
+
+0:02:40.720,0:02:44.300
+stealth addresses prevent outputs from being associated with wallet addresses.
+
+0:02:44.300,0:02:47.800
+The sender's privacy is shielded with the use of ring signatures.
+
+0:02:47.800,0:02:51.340
+Ring signatures help obfuscate the source of outputs.
+
+0:02:51.340,0:02:55.720
+In our next video, we’ll discuss the ring signature concept in more detail
+
+0:02:55.720,0:02:59.100
+and see how this feature creates untraceability in Monero.
+
+0:02:59.100,0:03:04.100
+If you are interested in what makes Monero the leading privacy-centric cryptocurrency,
+
+0:03:04.100,0:03:08.800
+please check out the other videos or visit getmonero.org.
