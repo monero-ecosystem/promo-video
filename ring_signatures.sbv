@@ -1,0 +1,194 @@
+0:00:01.900,0:00:05.380
+Monero is secure, untraceable, electronic cash.
+
+0:00:05.380,0:00:09.560
+It is open-source, decentralized, and freely accessible to all.
+
+0:00:09.560,0:00:12.740
+In this video, we will focus on ring signatures.
+
+0:00:12.740,0:00:14.580
+In our last video,
+
+0:00:14.580,0:00:17.760
+we illustrated how Monero stealth addresses prevent outputs
+
+0:00:17.760,0:00:20.560
+from being associated with a recipient's  public address.
+
+0:00:20.560,0:00:24.820
+This is accomplished by the use of one-time destination public keys.
+
+0:00:24.820,0:00:28.760
+One-time public keys are only spendable by the recipient,
+
+0:00:28.760,0:00:33.060
+and only the recipient is able to detect their designated output on the blockchain.
+
+0:00:33.060,0:00:38.020
+Since all outputs are unlinkable, the privacy of the recipient is ensured.
+
+0:00:38.020,0:00:40.380
+On the input side of the transaction,
+
+0:00:40.380,0:00:44.220
+the sender's privacy is protected with the use of ring signatures.
+
+0:00:44.220,0:00:46.900
+A ring signature is a type of digital signature
+
+0:00:46.900,0:00:49.980
+in which a group of possible signers are fused together
+
+0:00:49.980,0:00:53.940
+to produce a distinctive signature that authorizes a transaction.
+
+0:00:53.940,0:00:57.420
+This is analogous to the signing of a check from a joint bank account,
+
+0:00:57.420,0:01:00.620
+but with the actual signer remaining unknown.
+
+0:01:00.620,0:01:03.580
+The digital signature is made up of the actual signer
+
+0:01:03.580,0:01:05.920
+combined with non-signers to form a "ring,"
+
+0:01:05.920,0:01:09.040
+where all members are equal and valid.
+
+0:01:09.040,0:01:11.740
+The actual signer is a one-time spend key
+
+0:01:11.740,0:01:15.040
+that corresponds with an output being spent from the sender's wallet.
+
+0:01:15.040,0:01:18.600
+The non-signers are past transaction outputs pulled from the blockchain,
+
+0:01:18.600,0:01:20.580
+which act as decoys.
+
+0:01:20.580,0:01:24.180
+These outputs together make up the inputs of a transaction.
+
+0:01:24.180,0:01:27.760
+To a third party, all of the inputs appear equally likely
+
+0:01:27.760,0:01:30.560
+to be the output being spent in the transaction.
+
+0:01:30.560,0:01:33.980
+This feature helps the sender hide the origin of the transaction,
+
+0:01:33.980,0:01:37.840
+by making all inputs indistinguishable from each other.
+
+0:01:37.840,0:01:39.520
+You may now be asking yourself,
+
+0:01:39.520,0:01:43.480
+"if there is no way for a third party to verify which output is being spent,
+
+0:01:43.480,0:01:46.860
+what would prevent someone from spending the same output twice?"
+
+0:01:46.860,0:01:50.780
+This potential issue is addressed by the use of “key images.”
+
+0:01:50.780,0:01:55.000
+A key image is a cryptographic key derived from an output being spent
+
+0:01:55.000,0:01:58.640
+and is made part of every ring signature transaction.
+
+0:01:58.640,0:02:02.600
+There can exist only one key image for each output on the blockchain,
+
+0:02:02.600,0:02:04.600
+yet due to its cryptographic properties,
+
+0:02:04.600,0:02:08.860
+it is not possible to determine which output created which key image.
+
+0:02:08.860,0:02:12.460
+A list of all used key images are maintained in the blockchain,
+
+0:02:12.460,0:02:16.480
+enabling miners to verify that no outputs are spent twice.
+
+0:02:16.480,0:02:19.780
+Let's go through an example to see how all this works.
+
+0:02:19.780,0:02:23.980
+Alice wants to send Monero to Bob with a “ringsize” value of five.
+
+0:02:23.980,0:02:26.680
+One of the five inputs will come from Alice's wallet,
+
+0:02:26.680,0:02:29.200
+which will be consumed in the transaction.
+
+0:02:29.200,0:02:32.740
+The other four inputs are arbitrarily picked from the blockchain,
+
+0:02:32.740,0:02:34.840
+and are used as decoys.
+
+0:02:34.840,0:02:37.480
+This forms a group of five possible signers,
+
+0:02:37.480,0:02:41.860
+where all ring members are plausibly the actual signer of the transaction.
+
+0:02:41.860,0:02:44.800
+To an outside observer, including to Bob himself,
+
+0:02:44.800,0:02:49.500
+it's not clear which input was truly signed by Alice’s one-time spend key.
+
+0:02:49.500,0:02:51.380
+However, with the key image,
+
+0:02:51.380,0:02:55.880
+the network is able to securely confirm that the Monero being transferred to Bob
+
+0:02:55.880,0:02:58.200
+has not been spent before.
+
+0:02:58.200,0:03:00.920
+As you can see, by using ring signatures,
+
+0:03:00.920,0:03:03.220
+Monero protects the privacy of the sender
+
+0:03:03.220,0:03:05.260
+by obscuring the source of inputs,
+
+0:03:05.260,0:03:06.560
+and in doing so,
+
+0:03:06.560,0:03:11.320
+ensures that the origin of any monero remains untraceable.
+
+0:03:11.320,0:03:13.900
+To increase the privacy of both parties,
+
+0:03:13.900,0:03:18.200
+Ring Confidential Transactions, commonly referred to as RingCT,
+
+0:03:18.200,0:03:21.280
+were implemented to hide transaction amounts.
+
+0:03:21.280,0:03:24.960
+RingCT brings some improvement to the ring signature protocol.
+
+0:03:24.960,0:03:28.520
+We'll talk more about RingCT in our next video.
+
+0:03:28.520,0:03:32.960
+If you are interested in what makes Monero the leading privacy-centric cryptocurrency,
+
+0:03:32.960,0:03:37.900
+please check out the other videos or visit getmonero.org.

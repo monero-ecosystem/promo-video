@@ -64,7 +64,7 @@ While an outside observer is unable to see the actual amounts in outputs of a tr
 
 As a result of Monero's baked-in privacy features, users are able to transfer Monero to whomever they like; and no one would know how much was sent nor who the sender or recipient were.
 These qualities make Monero a leading privacy-centric digital currency, but the innovation doesn't stop there.
-In our next video, we'll discuss Kovri: an anonymizing router that will make Monero transactions more secure than ever before.
+In our next video, we'll discuss Kovri: a C++ I2P router that will make Monero transactions more secure than ever before.
 
 ## 7) - The end
 

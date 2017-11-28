@@ -26,7 +26,7 @@ In this video, we will focus on ring signatures.
  
 ## 2) - Technology recap
  
-In our last video, we illustrated how Monero stealth addresses prevent outputs from being associated with a recipient's  public address.
+In our last video, we illustrated how Monero stealth addresses prevent outputs from being associated with a recipient's public address.
 This is accomplished by the use of one-time destination public keys.
 One-time public keys are only spendable by the recipient, and only the recipient is able to detect their designated output on the blockchain.
 Since all outputs are unlinkable, the privacy of the recipient is ensured.
@@ -60,13 +60,13 @@ One of the five inputs will come from Alice's wallet, which will be consumed in 
 The other four inputs are arbitrarily picked from the blockchain, and are used as decoys.
 This forms a group of five possible signers, where all ring members are plausibly the actual signer of the transaction.
 To an outside observer, including to Bob himself, it's not clear which input was truly signed by Alice’s one-time spend key.
-However, with the key image, the network is able to securely confirm that the Monero being transferred to Bob have not been spent before.
+However, with the key image, the network is able to securely confirm that the Monero being transferred to Bob has not been spent before.
 As you can see, by using ring signatures, Monero protects the privacy of the sender by obscuring the source of inputs, and in doing so, ensures that the origin of any monero remains untraceable.
 
 ## 5) RingCT
 
 To increase the privacy of both parties, Ring Confidential Transactions, commonly referred to as RingCT, were implemented to hide transaction amounts.
-RingCT brings some improvement to the ring signture protocol.
+RingCT brings some improvement to the ring signature protocol.
 We'll talk more about RingCT in our next video.
 
 ## 6) - The end?
