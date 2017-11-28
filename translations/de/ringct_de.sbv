@@ -1,0 +1,242 @@
+0:00:01.120,0:00:05.640
+Monero ist sicheres, nicht nachverfolgbares, elektronisches Bargeld.
+
+0:00:05.640,0:00:09.560
+Es ist open-source, dezentral und frei zugänglich für alle.
+
+0:00:09.560,0:00:10.460
+In diesem Video
+
+0:00:10.460,0:00:13.520
+werden wir uns auf Ring Confidential Transactions (vertrauliche Ringtransaktionen) konzentrieren,
+
+0:00:13.520,0:00:16.140
+gemeinhin bekannt als RingCT.
+
+0:00:16.140,0:00:20.680
+In unserem letzten Video haben wir gezeigt, wie Monero-Ringsignaturen die Privatsphäre der Sender schützen,
+
+0:00:20.680,0:00:24.820
+indem sie verhindern, dass Transaktionsinputs voneinander unterschieden werden können.
+
+0:00:24.820,0:00:27.740
+Dies wird durch die Verwendung digitaler Signaturen erreicht,
+
+0:00:27.740,0:00:30.800
+bei denen ein tatsächlicher Unterzeichner unter mehreren Ringmitgliedern versteckt ist, 
+
+0:00:30.800,0:00:32.820
+ um eine Transaktion zu autorisieren.
+
+0:00:32.820,0:00:35.800
+Außerdem haben wir gelernt, dass Schlüsselbilder (Key Images) verwendet werden,
+
+0:00:35.800,0:00:39.380
+um zu verhindern, dass Monero-Inputs öfters als einmal ausgegeben werden.
+
+0:00:39.380,0:00:42.120
+Ringsignaturen stellen die Privatsphäre des Senders sicher,
+
+0:00:42.120,0:00:44.280
+da Inputs nicht nachverfolgbar sind.
+
+0:00:44.280,0:00:47.200
+Zur Erhöhung der Privatsphäre beider Parteien in einer Transaktion
+
+0:00:47.200,0:00:50.320
+wurde RingCT implementiert, um die Transaktionsbeträge verborgen zu halten.
+
+0:00:50.320,0:00:52.640
+Vor der Implementierung von RingCT
+
+0:00:52.640,0:00:57.160
+mussten Monero-Transaktionsbeträge in bestimmte Stückelungen aufgeteilt werden.
+
+0:00:57.160,0:00:58.180
+Zum Beispiel
+
+0:00:58.180,0:01:02.320
+würde ein Output von 12,5 Monero in drei separate Ringe mit Beträgen
+
+0:01:02.320,0:01:05.740
+mit Beträgen von 10, 2 und 0,5 aufgeteilt werden.
+
+0:01:05.740,0:01:08.800
+Diese Technik stellte sicher, dass es genügend Ringmitglieder geben würde, 
+
+0:01:08.800,0:01:12.880
+da eine Ringsignatur nur Outputs desselben Werts verknüpfen konnte.
+
+0:01:12.880,0:01:15.180
+Ein Nachteil dieses Prozesses ist jedoch,
+
+0:01:15.180,0:01:19.040
+dass ein externer Beobachter in der Lage war, die transferierten Beträge zu sehen.
+
+0:01:19.040,0:01:24.440
+Um diesen Mangel zu beheben, hat Monero im Januar 2017 RingCT aktiviert.
+
+0:01:24.440,0:01:29.000
+RingCT verhindert Lecks in der Privatsphäre, indem Transaktionsbeträge in der Blockchain versteckt werden.
+
+0:01:29.000,0:01:31.240
+Einen Monat nach der Aktivierung von RingCT 
+
+0:01:31.240,0:01:35.860
+nutzten etwa 98% der neuen Transaktionen das RingCT-Protokoll.
+
+0:01:35.860,0:01:41.940
+Ab September 2017 ist die Nutzung von RingCT für alle Monero-Transaktionen verpflichtend.
+
+0:01:41.940,0:01:48.240
+Mit RingCT liegt heute ein neu geschöpfter Monero zunächst in Outputs, die sichtbare Beträge haben.
+
+0:01:48.240,0:01:50.700
+Wenn der neue Monero erstmals transferiert wird, 
+
+0:01:50.700,0:01:53.960
+werden RingCT-Outputs mit maskierten Beträgen erzeugt.
+
+0:01:53.960,0:01:58.720
+Infolgedessen müssen Transaktionen nicht mehr in verschiedene Stückelungen aufgeteilt werden.
+
+0:01:58.720,0:02:03.100
+Dies bedeutet, dass eine Wallet Ringmitglieder von beliebigen RingCT-Outputs auswählen kann, 
+
+0:02:03.100,0:02:05.180
+was die Privatsphäre erheblich erhöht.
+
+0:02:05.180,0:02:09.740
+Es sollte beachtet werden, dass Monero-Ringsignaturen nicht sowohl Vor-RingCT-Outputs
+
+0:02:09.740,0:02:12.660
+als auch maskierte RingCT-Outputs in einem einzelnen Ring enthalten können,
+
+0:02:12.660,0:02:15.360
+also - wie bei neu geschöpften Monero - 
+
+0:02:15.360,0:02:19.620
+muss ein Vor-RingCT-Output zuerst in einen RingCT-Output umgewandelt werden,
+
+0:02:19.620,0:02:23.860
+bevor er in eine Ringsignatur mit anderen RingCT-Outputs eingeschlossen werden kann.
+
+0:02:23.860,0:02:25.280
+Lassen Sie uns ein Beispiel gemeinsam durchgehen 
+
+0:02:25.280,0:02:29.200
+und dann tiefer eintauchen, um zu sehen, wie RingCT funktioniert.
+
+0:02:29.200,0:02:31.840
+Alice hat einen Output von 12,56 
+
+0:02:31.840,0:02:34.700
+und möchte Bob 2,5 Monero senden.
+
+0:02:34.700,0:02:36.860
+Da Outputs nicht zweimal ausgegeben werden können,
+
+0:02:36.860,0:02:41.320
+muss Alice den Output zur Gänze ausgeben und den Restbetrag an sich selbst zurückgeben.
+
+0:02:41.320,0:02:45.540
+Also hätte Alice' Transaktion einen Input von 12,56 Monero
+
+0:02:45.540,0:02:47.240
+und zwei Outputs -
+
+0:02:47.240,0:02:50.200
+einen für Bob bestimmten von 2,5 Monero
+
+0:02:50.200,0:02:52.840
+und einen anderen, der 10,06 Monero beträgt 
+
+0:02:52.840,0:02:57.180
+und an ihre Wallet als „Wechselgeld“ der Transaktion zurückgesendet wird.
+
+0:02:57.180,0:03:00.960
+Um zu beweisen, dass keine Monero auf betrügerische Weise in einer Transaktion erzeugt wurden,
+
+0:03:00.960,0:03:05.560
+muss die Summe der Inputs einer Transaktion der Summe ihrer Outputs entsprechen.
+
+0:03:05.560,0:03:08.200
+Aufgrund der kryptographischen Eigenschaften von RingCT
+
+0:03:08.200,0:03:11.160
+ist Alice dazu angehalten, sich an den Betrag eines Outputs zu „binden“,
+
+0:03:11.160,0:03:15.160
+wobei sie dem Netzwerk gerade genug Informationen offenbart, um die Transaktion zu bestätigen,
+
+0:03:15.160,0:03:18.240
+während sie den Betrag, den sie ausgibt, nicht öffentlich mitteilt.
+
+0:03:18.240,0:03:20.680
+Obwohl Bindungen wie Zufallszahlen aussehen,
+
+0:03:20.680,0:03:24.620
+können Miner dennoch bestätigen, dass der an Bob gesendete Betrag an Monero
+
+0:03:24.620,0:03:27.680
+dem der verfügbaren Mittel entspricht. 
+
+0:03:27.680,0:03:31.900
+Ein weiterer wichtiger Aspekt einer RingCT-Transaktion ist der „Range Proof“ (Beweis des Wertebereichs),
+
+0:03:31.900,0:03:34.760
+der Sender daran hindert, sich an negative Werte zu binden,
+
+0:03:34.760,0:03:37.320
+um das Moneroangebot zu sichern.
+
+0:03:37.320,0:03:41.020
+Ein Range Proof beweist kryptographisch, dass die in einer Transaktion verwendete Beträge
+
+0:03:41.020,0:03:45.240
+größer 0 und kleiner als eine beliebige Zahl sind.
+
+0:03:45.240,0:03:46.960
+Während ein externer Beobachter nicht in der Lage ist,
+
+0:03:46.960,0:03:49.980
+die tatsächlichen Beträge in den Outputs einer Transaktion zu sehen,
+
+0:03:49.980,0:03:52.960
+kann er bestätigen, dass die Transaktion legitim ist
+
+0:03:52.960,0:03:55.140
+und das Netwerk sie akzeptieren sollte.
+
+0:03:55.140,0:03:58.040
+Als Ergebnis der integrierten Datenschutzfunktionen von Monero
+
+0:03:58.040,0:04:01.120
+können Nutzer Monero senden, an wen auch immer sie möchten.
+
+0:04:01.120,0:04:03.120
+Und niemand wüsste, wie viel gesendet wurde
+
+0:04:03.120,0:04:05.840
+noch wer der Sender oder der Empfänger war.
+
+0:04:05.840,0:04:09.800
+Diese Qualitäten machen Monero zu einer führenden privatsphärezentrierten Kryptowährung,
+
+0:04:09.800,0:04:12.080
+doch die Innovation hört dort nicht auf.
+
+0:04:12.080,0:04:14.400
+In unserem nächsten Video besprechen wir Kovri: 
+
+0:04:14.400,0:04:16.880
+einen C++-I2P-Router,
+
+0:04:16.880,0:04:20.920
+der Monero-Transaktionen sicherer macht als je zuvor.
+
+0:04:20.920,0:04:24.660
+Wenn Sie interessiert daran sind, was Monero zur führenden privatsphärezentrierten Kryptowährung macht,
+
+0:04:24.660,0:04:28.800
+sehen Sie sich gerne die anderen Videos an oder besuchen Sie getmonero.org.

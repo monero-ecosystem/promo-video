@@ -1,0 +1,194 @@
+0:00:01.900,0:00:05.380
+Monero ist sicheres, nicht nachverfolgbares, elektronisches Bargeld.
+
+0:00:05.380,0:00:09.560
+Es ist open-source, dezentral und frei zugänglich für alle.
+
+0:00:09.560,0:00:13.480
+In diesem Video werden wir uns auf Ringsignaturen konzentrieren.
+
+0:00:13.480,0:00:15.420
+In unserem letzten Video haben wir gezeigt,
+
+0:00:15.420,0:00:17.300
+wie Monero-Tarnadressen (Stealth Addresses) verhindern,
+
+0:00:17.300,0:00:20.560
+dass Outputs der öffentlichen Adresse eines Empfängers zugeordnet werden.
+
+0:00:20.560,0:00:24.820
+Dies erreicht man durch die Verwendung öffentlicher Schlüssel mit Einmalzielen.
+
+0:00:24.820,0:00:28.760
+Einmalige öffentliche Schlüssel können nur vom Empfänger ausgegeben werden
+
+0:00:28.760,0:00:33.060
+und nur der Empfänger kann seinen vorgesehenen Ouput in der Blockchain ausfindig machen.
+
+0:00:33.060,0:00:35.400
+Da Outputs nicht verknüpft werden können,
+
+0:00:35.400,0:00:38.280
+ist die Privatsphäre des Empfängers gewährleistet.
+
+0:00:38.280,0:00:40.380
+Auf der Inputseite der Transaktion
+
+0:00:40.380,0:00:44.220
+wird die Privatsphäre des Senders durch die Verwendung von Ringsignaturen geschützt.
+
+0:00:44.220,0:00:46.900
+Eine Ringsignatur ist eine Art digitaler Signatur,
+
+0:00:46.900,0:00:49.980
+bei der eine Gruppe möglicher Unterzeichner miteinander verschmolzen werden,
+
+0:00:49.980,0:00:53.940
+um eine unverwechselbare Signatur zu erzeugen, die eine Transaktion autorisiert.
+
+0:00:53.940,0:00:57.420
+Dies ist analog zur Unterzeichnung eines Schecks von einem gemeinsamen Bankkonto,
+
+0:00:57.420,0:01:00.620
+wobei jedoch der eigentliche Unterzeichner unbekannt bleibt.
+
+0:01:00.620,0:01:03.580
+Die digitale Signatur besteht aus dem tatsächlichen Unterzeichner,
+
+0:01:03.580,0:01:05.920
+der mit Nicht-Unterzeichnern vermischt wird, um einen „Ring“ zu bilden,
+
+0:01:05.920,0:01:09.040
+in dem alle Mitglieder gleichwertig und gültig sind.
+
+0:01:09.040,0:01:11.740
+Der eigentliche Unterzeichner ist ein einmaliger Ausgabeschlüssel (Spend Key),
+
+0:01:11.740,0:01:15.040
+der zu einem von der Wallet des Senders ausgegebenen Output passt.
+
+0:01:15.040,0:01:18.600
+Die Nicht-Unterzeichner sind der Blockchain entnommene vergangene Transaktionsoutputs,
+
+0:01:18.600,0:01:20.580
+die als Ablenkung dienen.
+
+0:01:20.580,0:01:24.340
+Diese Outputs bilden zusammen die Inputs einer Transaktion.
+
+0:01:24.340,0:01:27.760
+Für eine dritte Partei scheinen alle Inputs gleich wahrscheinlich
+
+0:01:27.760,0:01:30.560
+der Output zu sein, der in der Transaktion ausgegeben wird.
+
+0:01:30.560,0:01:33.980
+Diese Funktionalität hilft dem Sender, den Ursprung der Transaktion zu verbergen,
+
+0:01:33.980,0:01:37.840
+in dem sie dafür sorgt, dass alle Inputs nicht voneinander zu unterscheiden sind.
+
+0:01:37.840,0:01:39.520
+Sie fragen sich jetzt vielleicht:
+
+0:01:39.520,0:01:43.480
+„Wenn es keine Möglichkeit für eine dritte Partei gibt, zu überprüfen, welcher Output ausgegeben wird,
+
+0:01:43.480,0:01:47.160
+was würde jemanden daran hindern, denselben Output zweimal auszugeben?“
+
+0:01:47.160,0:01:50.780
+Dieses potentielle Problem wird durch die Verwendung von „Schlüsselbildern“ (Key Images) angegangen.
+
+0:01:50.780,0:01:55.000
+Ein Schlüsselbild ist ein kryptographischer Schlüssel, der von einem ausgegebenen Output abgeleitet wird
+
+0:01:55.000,0:01:58.640
+und Teil jeder Ringsignatur-Transaktion ist.
+
+0:01:58.640,0:02:02.600
+Es kann nur jeweils ein Schlüsselbild für jeden Output in der Blockchain existieren,
+
+0:02:02.600,0:02:04.600
+aufgrund seiner kryptographischen Eigenschaften
+
+0:02:04.600,0:02:08.860
+ist es trotzdem nicht möglich zu ermitteln, welcher Output welches Schlüsselbild erzeugt hat.
+
+0:02:08.860,0:02:12.460
+Eine Liste aller verwendeten Schlüsselbilder wird in der Blockchain verwaltet,
+
+0:02:12.460,0:02:16.360
+sodass Miner überprüfen können, dass keine Outputs doppelt ausgegeben werden.
+
+0:02:16.360,0:02:19.780
+Schauen wir uns ein Beispiel an, um zu sehen, wie all das funktioniert.
+
+0:02:19.780,0:02:23.980
+Alice möchte Bob Monero mit einer „Ringgröße“ von fünf schicken.
+
+0:02:23.980,0:02:26.680
+Einer der fünf Inputs wird aus Alice' Wallet stammen
+
+0:02:26.680,0:02:29.200
+und bei der Transaktion verbraucht werden.
+
+0:02:29.200,0:02:32.740
+Die anderen vier Inputs werden beliebig aus der Blockchain ausgewählt
+
+0:02:32.740,0:02:34.840
+und als Ablenkung verwendet.
+
+0:02:34.840,0:02:37.480
+So entsteht eine Gruppe von fünf möglichen Unterzeichnern,
+
+0:02:37.480,0:02:41.860
+wobei alle Ringmitglieder glaubhaft der tatsächliche Unterzeichner der Transaktion sind.
+
+0:02:41.860,0:02:44.800
+Einem externen Beobachter, einschließlich Bob selbst,
+
+0:02:44.800,0:02:49.500
+ist nicht klar, welcher Input wirklich von Alice' einmaligem Ausgabeschlüssel signiert wurde.
+
+0:02:49.500,0:02:53.560
+Mit dem Schlüsselbild kann das Netzwerk jedoch sicher bestätigen, 
+
+0:02:53.560,0:02:55.880
+dass der an Bob gesendete Monero
+
+0:02:55.880,0:02:58.200
+nicht vorher schon ausgegeben wurde.
+
+0:02:58.200,0:03:03.320
+Wie Sie sehen können, schützt Monero durch die Verwendung von Ringsignaturen die Privatsphäre des Senders,
+
+0:03:03.320,0:03:05.260
+indem der Ursprung der Inputs verschleiert wird,
+
+0:03:05.260,0:03:11.380
+und stellt dadurch sicher, dass der Ursprung jedes Monero nicht nachverfolgbar bleibt.
+
+0:03:11.380,0:03:13.900
+Um die Privatsphäre beider Parteien zu erhöhen,
+
+0:03:13.900,0:03:15.920
+wurden Ring Confidential Transactions (vertrauliche Ringtransaktionen),
+
+0:03:15.920,0:03:18.200
+gemeinhin als RingCT bezeichnet,
+
+0:03:18.200,0:03:21.280
+implementiert, um Transaktionsbeträge zu verbergen.
+
+0:03:21.280,0:03:24.960
+RingCT sorgt für einige Verbesserungen des Ringsignaturprotokolls.
+
+0:03:24.960,0:03:28.520
+Wir werden in unserem nächsten Video mehr über RingCT sprechen.
+
+0:03:28.520,0:03:32.960
+Wenn Sie interessiert daran sind, was Monero zur führenden privatsphärezentrierten Kryptowährung macht, 
+
+0:03:32.960,0:03:38.660
+sehen Sie sich gerne die anderen Videos an oder besuchen Sie getmonero.org.
