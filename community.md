@@ -16,18 +16,16 @@ Monero is based on a steady emission curve and uses a Proof of Work protocol tha
 This feature ensures decentralization by de-incentivising the development of application-specific hardware.
 Such industrial equipment leads to the concentration of hashing power to a few miners, which could potentially enable bad actors to act against the interest and values of the community.
 
+As an open source project, everyone is free to review, copy, remix, or propose modifications to the code.
+Development decisions are transparent and meeting chat logs are publicly accessible online for the world to see.
+You do not have to trust a for-profit corporation, vulnerable to secret subpoenas, or an omniscient, mythical founder.
+
 The Monero Project is a grassroots initiative that is made up a loose collective of individuals that are passionate about writing high quality, secure code.
 There is no company, shareholders, nor central authority that dictates the development process.
 Community members voluntarily associate with each other for the mutual interest of advancing the right to transactional privacy.
 
-As an open source project, everyone is free to review, copy, remix, or propose modifications to the code.
-Development decisions are transparent and meeting chat logs are publicly accessible online for the world to see.
-With Monero, you do not have to trust a for-profit corporation, vulnerable to secret subpoenas, or an omniscient, mythical founder.
-You are your own bank!
-
 ## 4) Hangouts
 
-Monero has a vibrant community .
 Most users are active on the Monero subreddit, which has seen steady, organic growth in the number of subscribers over the years.
 There are also related, subject-specific subreddits, such as “xmrtrader” – for price speculation, “MoneroMining” – for mining questions, “MoneroMarket” –  a place to buy or sell items with Monero, “MoneroCommunity” – a spot to discuss outreach, and “Kovri” – a subreddit dedicated for the Kovri project.
 Besides Reddit, members of the community are active in the #monero channel on Freenode IRC, Mattermost, and Slack.
@@ -49,6 +47,7 @@ The FFS encourages innovation and development of projects beneficial to the Mone
 
 ## 6) Conclusion
 
-- make closing argument
-
+As it has been shown, Monero is a revolutionary cryptocurrency, like no other, that is private by default and cryptographically secure.
+There is a vibrant community committed to decentralization and the development of high quality open software, without the need to trust anyone.
+With Monero, you are indeed your own bank!
 If you are interested in what makes Monero the leading privacy-centric cryptocurrency, please check out the other videos or visit getmonero.org.
