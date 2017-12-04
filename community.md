@@ -26,7 +26,7 @@ Community members voluntarily associate with each other for the mutual interest 
 
 ## 4) Hangouts
 
-Most users are active on the Monero subreddit, which has seen steady, organic growth in the number of subscribers over the years.
+Many users are active on the Monero subreddit, which has seen steady, organic growth in the number of subscribers over the years.
 There are also related, subject-specific subreddits, such as “xmrtrader” – for price speculation, “MoneroMining” – for mining questions, “MoneroMarket” –  a place to buy or sell items with Monero, “MoneroCommunity” – a spot to discuss outreach, and “Kovri” – a subreddit dedicated for the Kovri project.
 Besides Reddit, members of the community are active in the #monero channel on Freenode IRC, Mattermost, and Slack.
 If you are an avid Twitter user, you can follow announcements and current developments on the official Monero account at “monerocurrency”.
