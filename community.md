@@ -4,7 +4,7 @@ Monero is secure, untraceable, electronic cash. It is open-source, decentralized
 
 ## 2) Technology recap
 
-In the previous videos we talked about how Monero works from a technological prospective.
+In the previous videos we talked about how Monero works from a technological perspective.
 We saw how ring signatures obscures the source of a transaction, stealth addresses hides the recipient's wallet address, RingCT masks the amount sent, and how Kovri cloaks IP addresses.
 Now, we will turn to how Monero is different from other cryptocurrencies.
 
@@ -18,7 +18,7 @@ Such industrial equipment leads to the concentration of hashing power to a few m
 
 As an open source project, everyone is free to review, copy, remix, or propose modifications to the code.
 Development decisions are transparent and meeting chat logs are publicly accessible online for the world to see.
-You do not have to trust a for-profit corporation, vulnerable to secret subpoenas, or an omniscient, mythical founder.
+You do not have to trust a for-profit corporation, vulnerable to secret court orders, or an omniscient, mythical founder.
 
 The Monero Project is a grassroots initiative that is made up a loose collective of individuals that are passionate about writing high quality, secure code.
 There is no company, shareholders, nor central authority that dictates the development process.
