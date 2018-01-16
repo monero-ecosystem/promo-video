@@ -11,25 +11,25 @@ Now, we will turn to how Monero is different from other cryptocurrencies.
 ## 3) How is Monero different?
 
 For one, Monero is distributed fairly.
-There was no premine/instamine, developer tax, nor presale of tokens in an initial coin offering.
+There was no premine, developer tax, nor presale of tokens in an initial coin offering.
 
 Monero is based on a steady emission curve and a Proof of Work protocol.
 Proof of Work is a system that depends on difficult mathematical problems in order to generate new blocks in a blockchain. 
 Once a solution is found by a random miner in the network, they are rewarded a certain amount of coins for solving the computational puzzle.
 Monero uses an egalitarian type of Proof of Work that is configured in such a way that ordinary users can easily mine for coins on consumer-grade equipment.
 This feature ensures decentralization by de-incentivising the development of application-specific hardware.
-Such industrial equipment leads to the concentration of hashing power to a few miners, which could potentially enable bad actors to act against the interest and values of the community.
+Such industrial equipment leads to the concentration of hashing power to a few miners, which could potentially enable adversaries to act against the interest and values of the community.
 
-Another feature of Monero is having a dynamic block size, which makes Monero much more scalable than other cryptocurrencies.
+Another feature of Monero is having a dynamic block size, which makes Monero flexible in how it will grow.
 The maximum block size can adapt organically according to the amount of traffic on the network.
-As transaction traffic increases, blocks fill up, and when enough blocks reach a predefined value, the maximum block size increases.
-When transaction traffic decreases, the block size is reduced, and the maximum block size is readjusted.
+As transaction traffic increases, blocks start to fill up above median size up to a maximum of 2 times the median. 
+When the increase is sustained over a number of blocks, the median will increase and with it the maximum block size.
 This prevents an attacker from submitting multiple transactions to try to overwhelm the network, while maintaining space scarcity to create a fee market for miners to fill blocks.
 
-The transaction fees can also be readjusted.
-Once the median block size of the last 100 blocks significantly diverges from the minimum block size, transaction fees and the base reward are rebalanced.
-If the median block size is constantly above the block size limit, transaction fees eventually decline.
-Moreover, with a more efficient way to handle range proofs called Bulletproofs, there will be lower fees, space savings, and better verification times in Monero.
+The transaction fees are also readjusted automatically. 
+Once the median block size of the last 100 blocks changes, transaction fees and the base reward are rebalanced. 
+As the median block size increases, transaction fees per kilobyte decline. 
+Moreover, with a more efficient way to handle range proofs called Bulletproofs, there will be lower fees thanks to transaction size savings, and better verification times in Monero.
 
 As an open source project, everyone is free to review, copy, remix, or propose modifications to the code.
 Development decisions are transparent and meeting chat logs are publicly accessible online for the world to see.
