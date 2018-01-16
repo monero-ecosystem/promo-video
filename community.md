@@ -52,7 +52,7 @@ The Forum Funding System (also known as "FFS") is an avenue available to individ
 Some projects funded using the FFS method include, the design on an open source hardware wallet, the employment of a mathematician and computational physicist, and interestingly, this very video you are currently watching.
 The FFS encourages innovation and development of projects that are beneficial to the Monero ecosystem.
 
-## 6) Conclusion
+## 5) Conclusion
 
 As it has been shown, Monero is a revolutionary cryptocurrency, like no other, that is private by default and cryptographically secure.
 There is a vibrant community committed to decentralization and the development of high quality open software, without the need to trust anyone.
