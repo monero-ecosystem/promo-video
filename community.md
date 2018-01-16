@@ -5,7 +5,7 @@ Monero is secure, untraceable, electronic cash. It is open-source, decentralized
 ## 2) Technology recap
 
 In the previous videos we talked about how Monero works from a technological perspective.
-We saw how ring signatures obscures the source of a transaction, stealth addresses hides the recipient's wallet address, RingCT masks the amount sent, and how Kovri cloaks IP addresses.
+We saw how ring signatures obscure the source of a transaction, stealth addresses hide the recipient's wallet address, RingCT masks the amount sent, and how Kovri cloaks IP addresses.
 Now, we will turn to how Monero is different from other cryptocurrencies.
 
 ## 3) How is Monero different?
