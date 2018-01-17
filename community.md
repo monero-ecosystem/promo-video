@@ -29,7 +29,6 @@ This prevents an attacker from submitting multiple transactions to try to overwh
 The transaction fees are also readjusted automatically. 
 Once the median block size of the last 100 blocks changes, transaction fees and the base reward are rebalanced. 
 As the median block size increases, transaction fees per kilobyte decline. 
-Moreover, with a more efficient way to handle range proofs called Bulletproofs, there will be lower fees thanks to transaction size savings, and better verification times in Monero.
 
 As an open source project, everyone is free to review, copy, remix, or propose modifications to the code.
 Development decisions are transparent and meeting chat logs are publicly accessible online for the world to see.
