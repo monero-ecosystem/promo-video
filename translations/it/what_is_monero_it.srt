@@ -1,20 +1,17 @@
-﻿00:00:01,000 --> 00:00:04,000 To most people, financial privacy is very important
-Per molte persone la privacy finanziaria è molto importante 
+﻿00:00:01,000 --> 00:00:04,000 Per molte persone la privacy finanziaria è molto importante 
 
-00:00:04,000 --> 00:00:09,000 But banks, big corporations, and even governments having their records compromised
-Ma banche, grandi corporazioni, e perfino governi, stanno avendo enormi problemi di sicurezza
+00:00:04,000 --> 00:00:09,000 Ma le banche, le grandi corporazioni, e perfino i governi, stanno avendo enormi problemi di sicurezza
 
-00:00:09,000 --> 00:00:14,000 The undeniable conclusion is there is no safe place to conduct private transactions
-L'innegabile conclusione è che non esiste un posto sicuro per effettuare transazioni private
+00:00:09,000 --> 00:00:14,000 L'innegabile conclusione è che non esiste un luogo sicuro per effettuare transazioni private
 
 00:00:14,000 --> 00:00:17,000
-Beh...non ce n'era uno. Ti presento Monero!
+Beh... non esisteva... ora esiste. Ti presento Monero!
 
 00:00:17,000 --> 00:00:22,000
-Monero è una moneta sicura, privata ed intracciabile
+Monero è una valuta sicura, privata e non tracciabile
 
 00:00:22,000 --> 00:00:25,000
-Con Monero, tu sei la tua banca
+Con Monero, sei tu la tua banca
 
 00:00:25,000 --> 00:00:28,000 
 Solo tu controlli e sei responsabile dei tuoi fondi
@@ -23,7 +20,7 @@ Solo tu controlli e sei responsabile dei tuoi fondi
 Monero è privato
 
 00:00:30,000 --> 00:00:34,000  
-Questo significa che le aziende possono tenere i loro fornitori segreti,
+Questo significa che le aziende possono tenere segreti i propri fornitori,
 
 00:00:34,000 --> 00:00:38,000 
 così come i cittadini possono aggirare repressioni governative, vicini curiosi o truffatori
