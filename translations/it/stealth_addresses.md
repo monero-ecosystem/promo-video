@@ -12,7 +12,7 @@ Quando Alice invia dei Moneroj a Bob, Alice annuncia alla rete di voler trasferi
 In altre parole, una transazione è la trasformazione di vecchi output che appartengono ad un portafoglio in nuovi output che appartengono ad un altro portafoglio.
 Facciamo ora un passo avanti, per vedere come gli indirizzi stealth migliorano la privacy degli utenti.
 
-## 3) - Il termine - Indirizzi Stealth (Stealth Addresses)
+## 3) - Terminologia - Indirizzi Stealth (Stealth Addresses)
 
 In ogni transazione, un indirizzo stealth (stealth address), noto anche come chiave pubblica monouso, viene automaticamente generato e registrato come parte della transazione per indicare chi può spendere un output in una transazione successiva.
 Un osservatore esterno non può sapere se i fondi si muovono da Alice a Bob e non può neanche collegare fra loro gli indirizzi dei loro portafogli solamente guardando la blockchain.
