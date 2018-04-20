@@ -1,0 +1,245 @@
+0:00:01.120,0:00:05.640
+Monero è una moneta elettronica, sicura e non tracciabile.
+
+0:00:05.640,0:00:09.560
+E' opensource, decentralizzata e liberamente accessible a tutti.
+
+0:00:09.560,0:00:10.460
+In questo video
+
+0:00:10.460,0:00:13.520
+ci concentreremo sulle Transazioni Confidenziali ad Anello (Ring Confidential Transactions),
+
+0:00:13.520,0:00:16.140
+note anche come RingCT.
+
+0:00:16.140,0:00:17.240
+Nel nostro ultimo video
+
+0:00:17.240,0:00:20.680
+abbiamo spiegato come le firme ad anello di Monero proteggono la privacy del mittente
+
+0:00:20.680,0:00:24.820
+garantendo che gli input della transazione siano indistinguibili gli uni dagli altri.
+
+0:00:24.820,0:00:27.740
+Questo risultato viene ottenuto grazie ad un particolare uso delle firme digitali
+
+0:00:27.740,0:00:30.800
+per cui il vero firmatario viene nascosto in mezzo a più membri dell'anello
+
+0:00:30.800,0:00:32.820
+per autorizzare una transazione.
+
+0:00:32.820,0:00:37.260
+Abbiamo inoltre imparato che vengono usate le immagini della chiave per evitare che gli input di Monero
+
+0:00:37.260,0:00:39.380
+vengano spesi più di una volta.
+
+0:00:39.380,0:00:42.120
+Le firme ad anello garantiscono la privacy del mittente
+
+0:00:42.120,0:00:44.280
+dal momento che gli input non sono tracciabili.
+
+0:00:44.280,0:00:47.200
+Per aumentare la privacy di entrambe le parti
+
+0:00:47.200,0:00:50.320
+sono state implementate le RingCT al fine di nascondere l'ammontare delle transazioni.
+
+0:00:50.320,0:00:52.640
+Prima dell'implementazione delle RingCT,
+
+0:00:52.640,0:00:57.160
+Monero aveva bisogno degli ammontare della transazione per poter essere diviso in specifiche denominazioni.
+
+0:00:57.160,0:00:58.180
+Ad esempio,
+
+0:00:58.180,0:01:02.320
+un output di 12,5 Moneroj veniva partizionato in tre separati anelli
+
+0:01:02.320,0:01:05.740
+da 10, 2 e 0,5.
+
+0:01:05.740,0:01:08.800
+Questa tecnica garantiva che l'anello usato per le firme fosse ampio,
+
+0:01:08.800,0:01:12.880
+poiché a quel tempo la firma ad anello poteva associare solamente output del medesimo valore.
+
+0:01:12.880,0:01:15.180
+Eppure, lo svantaggio di questa tecnica
+
+0:01:15.180,0:01:19.040
+era che un osservatore esterno aveva la possibilità di vedere gli ammontare della transazione.
+
+0:01:19.040,0:01:24.440
+Per risolvere questo problema, Monero ha attivato le RingCT nel gennaio del 2017.
+
+0:01:24.440,0:01:29.000
+Le RingCT evitano perdite di privacy nascondendo l'ammontare delle transazioni sulla blockchain.
+
+0:01:29.000,0:01:31.200
+Un mese dopo l'attivazione delle RingCT,
+
+0:01:31.200,0:01:35.840
+approssimativamente il 98% delle nuove transazioni usavano il protocollo RingCT.
+
+0:01:35.840,0:01:41.940
+Da settembre 2017, l'uso delle RingCT è obbligatorio per tutte le transazioni Monero.
+
+0:01:41.940,0:01:43.620
+Oggi, con le RingCT,
+
+0:01:43.620,0:01:48.220
+i nuovi Moneroj creati risiedono dapprima negli output che possiedono ammontare visibili.
+
+0:01:48.220,0:01:50.700
+Quando viene trasferito per la prima volta un nuovo Monero,
+
+0:01:50.700,0:01:53.960
+vengono generati output RingCT con ammontare mascherato.
+
+0:01:53.960,0:01:58.720
+Il risultato è che ora le transazioni non devono essere più partizionate in differenti denominazioni.
+
+0:01:58.720,0:02:03.100
+Questo significa che un portafoglio è libero di selezionare i membri dell'anello da ogni output RingCT,
+
+0:02:03.100,0:02:05.180
+cosa che migliora significativamente la privacy.
+
+0:02:05.180,0:02:09.740
+E' bene notare che le firme ad anello di Monero non possono includere all'interno dello stesso anello
+
+0:02:09.740,0:02:12.660
+output pre-RingCT e RingCT.
+
+0:02:12.660,0:02:15.360
+Pertanto un output pre-RingCT (ad esempio i nuovi Moneroj generati)
+
+0:02:15.360,0:02:19.620
+deve essere convertito in un output RingCT
+
+0:02:19.620,0:02:23.860
+prima di poter essere incluso in una firma ad anello con altri output RingCT.
+
+0:02:23.860,0:02:25.280
+Ora vediamo un esempio,
+
+0:02:25.280,0:02:29.200
+per poi entrare nello specifico su come funzionano le RingCT.
+
+0:02:29.200,0:02:31.840
+Alice ha un output di 12,56
+
+0:02:31.840,0:02:34.700
+e vorrebbe inviare 2,5 Moneroj a Bob.
+
+0:02:34.700,0:02:36.860
+Dal momento che gli output non possono essere spesi due volte,
+
+0:02:36.860,0:02:41.320
+Alice ha bisogno di spendere l'output nella sua interezza e far tornare il resto a se stessa.
+
+0:02:41.320,0:02:45.540
+Quindi, la transazione di Alice avrà un input da 12,56 Moneroj
+
+0:02:45.540,0:02:47.240
+e due output -
+
+0:02:47.240,0:02:50.200
+uno composto dai 2,5 Moneroj indirizzati a Bob
+
+0:02:50.200,0:02:52.840
+e l'altro composto da 10,06 Moneroj
+
+0:02:52.840,0:02:57.180
+che vengono inviati al portafoglio di Alice come "resto" della transazione.
+
+0:02:57.180,0:03:00.960
+Per provare che nessun Monero è stato generato in modo fraudolento in una transazione,
+
+0:03:00.960,0:03:05.560
+la somma degli input della transazione deve essere uguale a quella degli output.
+
+0:03:05.560,0:03:08.200
+Grazie alle proprietà crittografiche delle RingCT,
+
+0:03:08.200,0:03:11.160
+ad Alice è richiesto di "prendere un impegno" ("commit") sull'ammontare di un output,
+
+0:03:11.160,0:03:15.160
+ovvero rivelando le minime informazioni richieste dalla rete per confermare la transazione,
+
+0:03:15.160,0:03:18.240
+senza però rivelare pubblicamente l'ammontare che sta spendendo.
+
+0:03:18.240,0:03:20.680
+Nonostante gli "impegni" ("commitments") appaiano come numeri casuali,
+
+0:03:20.680,0:03:24.620
+i minatori sono ancora in grado di confermare che l'ammontare di Moneroj inviati a Bob
+
+0:03:24.620,0:03:27.680
+è lo stesso dell'ammontare di fondi disponibile.
+
+0:03:27.680,0:03:31.900
+Un altro aspetto importante di una transazione RingCT è la "prova di intervallo" ("range proof"),
+
+0:03:31.900,0:03:34.760
+che impedisce ai mittenti di prendere un impegno su valori negativi.
+
+0:03:34.760,0:03:37.320
+In questo modo la fornitura di Moneroj viene resa sicura.
+
+0:03:37.320,0:03:41.020
+Una prova di intervallo prova crittograficamente che gli ammontare di una transazione
+
+0:03:41.020,0:03:45.240
+sono maggiori di zero e minori di un numero arbitrario.
+
+0:03:45.240,0:03:49.980
+Sebbene un osservatore esterno non sia in grado di vedere i veri ammontare negli output di una transazione,
+
+0:03:49.980,0:03:53.000
+può comunque confermare che la transazione è legittima
+
+0:03:53.000,0:03:55.140
+e quindi accettabile dalla rete.
+
+0:03:55.140,0:03:58.040
+Grazie alle funzionalità orientate alla privacy offerte da Monero,
+
+0:03:58.040,0:04:01.120
+gli utenti possono trasferire Moneroj a chiunque vogliono;
+
+0:04:01.120,0:04:03.120
+nessuno saprà mai quanti Moneroj sono stati inviati,
+
+0:04:03.120,0:04:05.840
+da chi sono stati inviati e a chi sono stati inviati.
+
+0:04:05.840,0:04:09.800
+Queste qualità rendono Monero la criptovaluta leader focalizzata sulla privacy,
+
+0:04:09.800,0:04:12.080
+ma le innovazioni non sono finite qui.
+
+0:04:12.080,0:04:14.400
+Nel nostro prossimo video parleremo di Kovri:
+
+0:04:14.400,0:04:16.880
+un router I2P, scritto in C++,
+
+0:04:16.880,0:04:20.920
+che rende ancora più sicure le transazioni Monero.
+
+0:04:20.920,0:04:24.660
+Se siete interessati a ciò che rende Monero la criptovaluta leader focalizzata sulla privacy,
+
+0:04:24.660,0:04:28.800
+guardate gli altri video o visitate il sito getmonero.org.
