@@ -60,6 +60,6 @@ Grazie a queste caratteristiche, Kovri è un'ottima soluzione per comunicare su 
 Kovri rivoluzionerà le connessioni peer-to-peer ed aumenterà globalmente la resilienza e la privacy della rete.
 Nodi malevoli non potranno più minacciare gli utenti che creano transazioni né bloccare la trasmissione delle transazioni sulla rete.
 Kovri verrà reso disponibile all'interno dei futuri rilasci di Monero e sarà abilitato di default.
-Inoltre, Kovri esporrà delle API che ne consentiranno l'utilizzo anche ad altre criptovalute ed applicazioni, non solo a Monero.
+Inoltre, Kovri implementerà delle API che ne consentiranno l'utilizzo anche ad altre criptovalute ed applicazioni, non solo a Monero.
 
 Per conoscere meglio Monero ed il progetto Kovri, visitate i siti getmonero.org e getkovri.org.

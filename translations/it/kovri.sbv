@@ -266,7 +266,7 @@ e sarà abilitato di default.
 Inoltre,
 
 0:04:50.260,0:04:55.340
-Kovri esporrà delle API che ne consentiranno l'utilizzo anche ad altre criptovalute ed applicazioni,
+Kovri implementerà delle API che ne consentiranno l'utilizzo anche ad altre criptovalute ed applicazioni,
 
 0:04:55.340,0:04:57.180
 non solo a Monero.
