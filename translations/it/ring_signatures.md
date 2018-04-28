@@ -1,18 +1,18 @@
-## 1) - Intro
+## 1) Introduzione
 
 Monero è una moneta elettronica, sicura e non tracciabile. E' opensource, decentralizzata e liberamente accessible a tutti.
 In questo video, ci concentreremo sulle firme ad anello.
  
-## 2) - Ripasso sulla tecnologia
+## 2) Ripasso sulla tecnologia
  
 Nel video precedente abbiamo spiegato come gli indirizzi nascosti Monero assicurano che gli output non possano essere associati all'indirizzo pubblico del destinatario.
-Questo è possible grazie all'utilizzo di chiavi pubbliche monouso di destinazione.
+Questo è possible grazie all'utilizzo di chiavi di destinazione pubbliche monouso.
 Le chiavi pubbliche monouso sono spendibili solamente dal destinatario, e solo il destinatario è in grado di rilevare il suo output designato sulla blockchain.
 Dal momento che tutti gli output non sono collegabili fra loro, viene garantita la privacy del destinatario.
 
 Dal lato dell'input della transazione, la privacy del mittente è protetta mediante l'utilizzo delle firme ad anello.
 
-## 3) - Terminologia - Firme ad Anello (Ring Signatures), Immagine della chiave (Key Image)
+## 3) Terminologia - Firme ad Anello (Ring Signatures), Immagine della chiave (Key Image)
 
 Una firma ad anello (ring signature) è un tipo di firma digitale nella quale più potenziali firmatari vengono fusi insieme per produrre una firma distintiva che autorizza una transazione.
 E' l'analogo di una firma su un assegno di un conto bancario cointestato, ma di cui il vero firmatario resta ignoto.
@@ -31,7 +31,7 @@ All'interno della blockchain viene mantenuta una lista di tutte le immagini dell
 
 Ora vediamo un esempio di come funziona tutto questo.
 
-## 4) – Transazione basata su firme ad anello
+## 4) Transazione basata su firme ad anello
 
 Alice vuole inviare dei Moneroj a Bob con un "ringsize" (dimensione dell'anello) pari a cinque.
 Uno di questi cinque input proverrà dal portafoglio di Alice e verrà consumato nella transazione.
@@ -47,6 +47,6 @@ Per aumentare la privacy di entrambe le parti sono state implementate le Transaz
 RingCT porta alcuni miglioramenti al protocollo delle firme ad anello.
 Affronteremo in dettaglio l'argomento RingCT nel nostro prossimo video.
 
-## 6) - La fine?
+## 6) La fine?
 
 Se siete interessati a ciò che rende Monero la criptovaluta leader focalizzata sulla privacy, guardate gli altri video o visitate il sito getmonero.org.

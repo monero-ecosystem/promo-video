@@ -5,7 +5,7 @@ Monero è una moneta elettronica, sicura e non tracciabile.
 E' opensource, decentralizzata e liberamente accessible a tutti.
 
 0:00:08.520,0:00:13.220
-In questo video ci concentreremo su una tecnologia per l'anonimato chiamata Kovri.
+In questo video ci concentreremo su una tecnologia di anonimizzazione chiamata Kovri.
 
 0:00:13.220,0:00:17.240
 Finora abbiamo spiegato come Monero offusca le informazioni registrate sulla blockchain.
@@ -29,7 +29,7 @@ quando viene effettuata una transazione.
 Questo problema viene affrontato da Kovri.
 
 0:00:36.380,0:00:39.640
-Kovri è una tecnologia per l'anonimato gratuita, decentralizzata
+Kovri è una tecnologia di anonimizzazione gratuita, decentralizzata
 
 0:00:39.640,0:00:42.520
 e basata sulle specifiche aperte di I2P.
@@ -92,7 +92,7 @@ Alice corre un rischio quando trasmette la sua transazione
 poiché alcuni nodi potrebbero registrare gli indirizzi IP.
 
 0:01:42.100,0:01:43.940
-Un avversario con risorse sufficienti
+Un soggetto malevolo con risorse sufficienti
 
 0:01:43.940,0:01:47.140
 potrebbe tentare di associare le transazioni agli indirizzi IP
@@ -101,7 +101,7 @@ potrebbe tentare di associare le transazioni agli indirizzi IP
 per determinare il luogo da cui sono state generate.
 
 0:01:49.920,0:01:55.040
-Questo tentativo potrebbe portare l'avversario a non ritrasmettere la transazione di Alice al resto della rete;
+Questo tentativo potrebbe portare il soggetto malevolo a non ritrasmettere la transazione di Alice al resto della rete;
 
 0:01:55.040,0:01:58.280
 o, ancor peggio, a presentarsi alla porta di Alice.

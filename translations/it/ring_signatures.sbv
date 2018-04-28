@@ -17,7 +17,7 @@ abbiamo spiegato come gli indirizzi nascosti Monero assicurano che gli output
 non possano essere associati all'indirizzo pubblico del destinatario.
 
 0:00:20.560,0:00:24.820
-Questo è possible grazie all'utilizzo di chiavi pubbliche monouso di destinazione.
+Questo è possible grazie all'utilizzo di chiavi di destinazione pubbliche monouso.
 
 0:00:24.820,0:00:28.760
 Le chiavi pubbliche monouso sono spendibili solamente dal destinatario,

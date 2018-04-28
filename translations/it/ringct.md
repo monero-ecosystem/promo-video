@@ -1,9 +1,9 @@
-## 1) - Introduzione
+## 1) Introduzione
 
 Monero è una moneta elettronica, sicura e non tracciabile. E' opensource, decentralizzata e liberamente accessible a tutti.
 In questo video ci concentreremo sulle Transazioni Confidenziali ad Anello (Ring Confidential Transactions), note anche come RingCT.
  
-## 2) - Ripasso sulla tecnologia
+## 2) Ripasso sulla tecnologia
  
 Nel nostro ultimo video abbiamo spiegato come le firme ad anello di Monero proteggono la privacy del mittente garantendo che gli input della transazione siano indistinguibili gli uni dagli altri.
 Questo risultato viene ottenuto grazie ad un particolare uso delle firme digitali per cui il vero firmatario viene nascosto in mezzo a più membri dell'anello per autorizzare una transazione.
@@ -11,7 +11,7 @@ Abbiamo inoltre imparato che vengono usate le immagini della chiave per evitare 
 Le firme ad anello garantiscono la privacy del mittente dal momento che gli input non sono tracciabili.
 Per aumentare la privacy di entrambe le parti sono state implementate le RingCT al fine di nascondere l'ammontare delle transazioni.
 
-## 3) - L'introduzione delle RingCT
+## 3) L'introduzione delle RingCT
 
 Prima dell'implementazione delle RingCT, Monero aveva bisogno degli ammontare della transazione per poter essere diviso in specifiche denominazioni.
 Ad esempio, un output di 12,5 Moneroj veniva partizionato in tre separati anelli da 10, 2 e 0,5.
@@ -22,7 +22,7 @@ Le RingCT evitano perdite di privacy nascondendo l'ammontare delle transazioni s
 Un mese dopo l'attivazione delle RingCT, approssimativamente il 98% delle nuove transazioni usavano il protocollo RingCT.
 Da settembre 2017, l'uso delle RingCT è obbligatorio per tutte le transazioni Monero.
 
-## 4)  Attributi non tecnici delle RingCT
+## 4) Caratteristiche non tecniche delle RingCT
 
 Oggi, con le RingCT, i nuovi Moneroj creati risiedono dapprima negli output che possiedono ammontare visibili.
 Quando viene trasferito per la prima volta un nuovo Monero, vengono generati output RingCT con ammontare mascherato.
@@ -31,7 +31,7 @@ Questo significa che un portafoglio è libero di selezionare i membri dell'anell
 E' bene notare che le firme ad anello di Monero non possono includere all'interno dello stesso anello output pre-RingCT e RingCT. Pertanto un output pre-RingCT (ad esempio i nuovi Moneroj generati) deve essere convertito in un output RingCT prima di poter essere incluso in una firma ad anello con altri output RingCT.
 Ora vediamo un esempio, per poi entrare nello specifico su come funzionano le RingCT.
 
-## 5) – RingCT e Attributi Tecnici
+## 5) RingCT e caratteristiche tecniche
 
 Alice ha un output di 12,56 e vorrebbe inviare 2,5 Moneroj a Bob.
 Dal momento che gli output non possono essere spesi due volte, Alice ha bisogno di spendere l'output nella sua interezza e far tornare il resto a se stessa.
@@ -43,13 +43,13 @@ Un altro aspetto importante di una transazione RingCT è la "prova di intervallo
 Una prova di intervallo prova crittograficamente che gli ammontare di una transazione sono maggiori di zero e minori di un numero arbitrario.
 Sebbene un osservatore esterno non sia in grado di vedere i veri ammontare negli output di una transazione, può comunque confermare che la transazione è legittima e quindi accettabile dalla rete.
 
-## 6) - Conclusioni
+## 6) Conclusioni
 
-Grazie alle funzionalità orientate alla privacy offerte da Monero, gli utenti possono trasferire Moneroj a chiunque vogliono; nessuno saprà mai quanti Moneroj sono stati inviati, da chi sono stati inviati e a chi sono stati inviati. 
+Grazie alle funzionalità orientate alla privacy offerte da Monero, gli utenti possono trasferire Moneroj a chiunque vogliano; nessuno saprà mai quanti Moneroj sono stati inviati, da chi sono stati inviati e a chi sono stati inviati. 
 Queste qualità rendono Monero la criptovaluta leader focalizzata sulla privacy, ma le innovazioni non sono finite qui.
 Nel nostro prossimo video parleremo di Kovri: un router I2P, scritto in C++, che rende ancora più sicure le transazioni Monero.
 
-## 7) - La fine?
+## 7) La fine?
 
 Se siete interessati a ciò che rende Monero la criptovaluta leader focalizzata sulla privacy, guardate gli altri video o visitate il sito getmonero.org.
 
