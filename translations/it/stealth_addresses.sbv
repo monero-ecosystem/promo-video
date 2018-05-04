@@ -1,0 +1,182 @@
+0:00:00.000,0:00:04.420
+Monero è una moneta elettronica, sicura e non tracciabile.
+
+0:00:04.420,0:00:08.700
+E' opensource, decentralizzata e liberamente accessible a tutti.
+
+0:00:08.700,0:00:11.600
+In questo video, ci concentreremo sugli indirizzi nascosti.
+
+0:00:11.600,0:00:15.860
+Facciamo un passo indietro, e ripassiamo brevemente alcuni concetti esposti nel video precedente.
+
+0:00:15.860,0:00:20.420
+Abbiamo imparato che Monero utilizza una rete di consenso peer-to-peer distribuita
+
+0:00:20.420,0:00:22.860
+per registrare gli output delle transazioni in una blockchain.
+
+0:00:22.860,0:00:25.020
+Se Alice possiede dei Moneroj,
+
+0:00:25.020,0:00:28.320
+significa che lei ha un controllo esclusivo su alcuni di questi output.
+
+0:00:28.320,0:00:30.680
+Quando Alice invia dei Moneroj a Bob,
+
+0:00:30.680,0:00:32.340
+Alice annuncia alla rete
+
+0:00:32.340,0:00:35.460
+di voler trasferire il valore di alcuni degli output in suo possesso
+
+0:00:35.460,0:00:37.300
+ad un nuovo output di Bob,
+
+0:00:37.300,0:00:39.400
+che solo lui può controllare.
+
+0:00:39.400,0:00:40.940
+In altre parole,
+
+0:00:40.940,0:00:44.680
+una transazione è la trasformazione di vecchi output che appartengono ad un portafoglio
+
+0:00:44.680,0:00:46.800
+in nuovi output che appartengono ad un altro portafoglio.
+
+0:00:46.800,0:00:48.800
+Facciamo ora un passo avanti,
+
+0:00:48.800,0:00:51.860
+per vedere come gli indirizzi nascosti migliorano la privacy degli utenti.
+
+0:00:51.860,0:00:53.880
+In ogni transazione,
+
+0:00:53.880,0:00:57.000
+un indirizzo nascosto (stealth address), noto anche come chiave pubblica monouso,
+
+0:00:57.000,0:01:00.680
+viene automaticamente generato e registrato come parte della transazione
+
+0:01:00.680,0:01:03.700
+per indicare chi può spendere un output in una transazione successiva.
+
+0:01:03.700,0:01:08.000
+Un osservatore esterno non può sapere se i fondi si muovono da Alice a Bob
+
+0:01:08.000,0:01:11.340
+e non può neanche collegare fra loro gli indirizzi dei loro portafogli solamente guardando la blockchain.
+
+0:01:11.340,0:01:14.080
+Pertanto, quando Alice invia dei Moneroj a Bob,
+
+0:01:14.080,0:01:18.640
+l'output che Bob riceve non sarà pubblicamente associato all'indirizzo del portafoglio di Bob.
+
+0:01:18.640,0:01:23.040
+Comunque, se Alice volesse ottenere prova di aver inviato Moneroj a Bob,
+
+0:01:23.040,0:01:26.260
+il suo portafoglio consentirebbe di verificare che il pagamento è stato effettuato.
+
+0:01:26.260,0:01:31.640
+Bob può stare certo che nessun altro può vedere se e quando gli sono stati inviati dei Moneroj.
+
+0:01:31.640,0:01:35.260
+Se Bob fosse un venditore, questa funzionalità potrebbe risultare molto comoda,
+
+0:01:35.260,0:01:38.080
+poiché nessuno potrebbe capire quanti clienti ha,
+
+0:01:38.080,0:01:40.240
+se questi clienti sono di ritorno,
+
+0:01:40.240,0:01:42.820
+men che meno se Bob ha clienti.
+
+0:01:42.820,0:01:44.680
+Ed ora allacciate le cinture:
+
+0:01:44.680,0:01:47.360
+stiamo per affrontare questioni un po' tecniche.
+
+0:01:47.360,0:01:51.060
+Un indirizzo di portafoglio Monero è una stringa di 95 caratteri,
+
+0:01:51.060,0:01:54.460
+la quale consta di una chiave pubblica di visualizzazione ed una chiave pubblica di spesa.
+
+0:01:54.460,0:01:56.700
+Quando Alice invia dei Moneroj a Bob,
+
+0:01:56.700,0:02:00.700
+il portafoglio di Alice userà la chiave pubblica di visualizzazione e la chiave pubblica di spesa di Bob,
+
+0:02:00.700,0:02:02.440
+insieme ad alcuni dati casuali,
+
+0:02:02.440,0:02:05.660
+al fine di generare un'unica chiave pubblica monouso per il nuovo output di Bob.
+
+0:02:05.660,0:02:09.200
+Chiunque può vedere la chiave pubblica monouso sulla blockchain,
+
+0:02:09.200,0:02:12.820
+ma solamente Alice e Bob sanno che Alice ha inviato dei Moneroj a Bob.
+
+0:02:12.820,0:02:15.120
+L'output è creato in modo tale
+
+0:02:15.120,0:02:17.620
+che Bob sia in grado di localizzare l'output a lui destinato
+
+0:02:17.620,0:02:20.620
+scansionando la blockchain con la chiave privata di visualizzazione del suo portafoglio.
+
+0:02:20.620,0:02:24.180
+Una volta che l'output viene trovato e recuperato dal portafoglio di Bob,
+
+0:02:24.180,0:02:27.180
+Bob è in grado di calcolare una chiave privata monouso
+
+0:02:27.180,0:02:29.580
+associata alla chiave pubblica monouso
+
+0:02:29.580,0:02:33.060
+e spendere tale output utilizzando la chiave privata di spesa del suo portafoglio.
+
+0:02:33.060,0:02:34.840
+L'intero processo avviene
+
+0:02:34.840,0:02:36.680
+senza che l'indirizzo del portafoglio di Bob
+
+0:02:36.680,0:02:38.940
+sia legato ad alcuna transazione.
+
+0:02:38.940,0:02:40.720
+Abbiamo visto che gli indirizzi nascosti
+
+0:02:40.720,0:02:44.300
+assicurano che gli output non possano essere associati agli indirizzi di portafoglio.
+
+0:02:44.300,0:02:47.800
+La privacy del mittente è assicurata grazie all'uso delle firme ad anello (ring signatures).
+
+0:02:47.800,0:02:51.340
+Le firme ad anello aiutano ad offuscare la sorgente degli output.
+
+0:02:51.340,0:02:55.720
+Nel prossimo video, esporremo più in dettaglio il concetto delle firme ad anello
+
+0:02:55.720,0:02:59.100
+e vedremo come questa caratteristica garantisce la non tracciabilità in Monero.
+
+0:02:59.100,0:03:04.100
+Se siete interessati a ciò che rende Monero la criptovaluta leader focalizzata sulla privacy,
+
+0:03:04.100,0:03:08.800
+guardate gli altri video o visitate il sito getmonero.org.

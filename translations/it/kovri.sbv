@@ -1,0 +1,278 @@
+0:00:01.260,0:00:04.260
+Monero è una moneta elettronica, sicura e non tracciabile.
+
+0:00:04.260,0:00:08.520
+E' opensource, decentralizzata e liberamente accessible a tutti.
+
+0:00:08.520,0:00:13.220
+In questo video ci concentreremo su una tecnologia di anonimizzazione chiamata Kovri.
+
+0:00:13.220,0:00:17.240
+Finora abbiamo spiegato come Monero offusca le informazioni registrate sulla blockchain.
+
+0:00:17.240,0:00:19.500
+Le firme ad anello oscurano il mittente.
+
+0:00:19.500,0:00:23.180
+Gli indirizzi nascosti garantiscono che osservatori esterni non possano conoscere l'indirizzo di destinazione.
+
+0:00:23.180,0:00:26.860
+Le RingCT nascondono l'ammontare del Moneroj che vengono trasferiti.
+
+0:00:26.860,0:00:31.380
+Eppure sulla rete possono trapelare alcune informazioni personali
+
+0:00:31.380,0:00:33.100
+quando viene effettuata una transazione.
+
+0:00:33.100,0:00:36.380
+Questo problema viene affrontato da Kovri.
+
+0:00:36.380,0:00:39.640
+Kovri è una tecnologia di anonimizzazione gratuita, decentralizzata
+
+0:00:39.640,0:00:42.520
+e basata sulle specifiche aperte di I2P.
+
+0:00:42.520,0:00:45.800
+Kovri utilizza tecniche sofisticate di cifratura e di routing
+
+0:00:45.800,0:00:49.120
+per creare una sovrastruttura di rete privata su internet.
+
+0:00:49.120,0:00:54.460
+Questa sovrastruttura protetta consente agli utenti di nascondere la propria posizione geografica ed il proprio indirizzo IP.
+
+0:00:54.460,0:00:57.000
+Un indirizzo IP è come un indirizzo di casa per internet,
+
+0:00:57.000,0:01:00.480
+pertanto è un dato a dir poco sensibile.
+
+0:01:00.480,0:01:02.220
+Consideriamo alcuni scenari
+
+0:01:02.220,0:01:04.800
+per vedere come questo software leggero e focalizzato sulla privacy
+
+0:01:04.800,0:01:07.420
+aiuta a rafforzare la privacy dell'utente.
+
+0:01:07.420,0:01:10.460
+Supponiamo che Alice voglia inviare dei Moneroj a Bob.
+
+0:01:10.460,0:01:15.240
+Il portafoglio di Alice crea una transazione e la trasmette alla rete Monero.
+
+0:01:15.240,0:01:18.660
+La rete Monero è formata da nodi che comunicano fra loro
+
+0:01:18.660,0:01:21.740
+trasmettendosi messaggi ed utilizzando i propri indirizzi IP.
+
+0:01:21.740,0:01:25.040
+Questo significa che è possibile tracciare i dati a livello geografico
+
+0:01:25.040,0:01:27.060
+mentre essi transitano su internet,
+
+0:01:27.060,0:01:30.500
+dal punto iniziale al punto finale passando per tutti i punti intermedi.
+
+0:01:30.500,0:01:32.820
+Anche se gli indirizzi di portafoglio del mittente e del destinatario
+
+0:01:32.820,0:01:36.060
+- come anche l'ammontare dei Moneroj trasferiti - rimangono privati,
+
+0:01:36.060,0:01:39.040
+Alice corre un rischio quando trasmette la sua transazione
+
+0:01:39.040,0:01:42.100
+poiché alcuni nodi potrebbero registrare gli indirizzi IP.
+
+0:01:42.100,0:01:43.940
+Un soggetto malevolo con risorse sufficienti
+
+0:01:43.940,0:01:47.140
+potrebbe tentare di associare le transazioni agli indirizzi IP
+
+0:01:47.140,0:01:49.920
+per determinare il luogo da cui sono state generate.
+
+0:01:49.920,0:01:55.040
+Questo tentativo potrebbe portare il soggetto malevolo a non ritrasmettere la transazione di Alice al resto della rete;
+
+0:01:55.040,0:01:58.280
+o, ancor peggio, a presentarsi alla porta di Alice.
+
+0:01:58.280,0:02:00.800
+Immaginiamo ora uno scenario differente.
+
+0:02:00.800,0:02:05.280
+Supponiamo che Charlie voglia supportare la rete Monero tenendo attivo un nodo a casa propria.
+
+0:02:05.280,0:02:09.420
+Dopo alcune settimane, Charlie riceve una lettera di diffida da parte del suo internet provider
+
+0:02:09.420,0:02:13.020
+il quale sostiene che tenere attivo un nodo costituisce una violazione dei termini di servizio.
+
+0:02:13.020,0:02:14.380
+Oppure considerate questo:
+
+0:02:14.380,0:02:16.820
+supponiamo che Dave sia un operatore di un pool di minatori
+
+0:02:16.820,0:02:21.300
+che dona una parte della ricompensa di blocco ad un partito politico o per una causa controversa.
+
+0:02:21.300,0:02:24.100
+Gli altri nodi potrebbero rigettare scientemente i blocchi da lui risolti
+
+0:02:24.100,0:02:27.780
+per esprimere il loro disappunto verso la sua visione politica o sociale.
+
+0:02:27.780,0:02:32.840
+Alice, Bob, Charlie e Dave, fra di loro, hanno almeno una cosa in comune: 
+
+0:02:32.840,0:02:35.240
+i loro indirizzi IP sono esposti.
+
+0:02:35.240,0:02:39.480
+Gli utenti potrebbero provare a nascondere il proprio indirizzo IP utilizzando Tor o una VPN,
+
+0:02:39.480,0:02:43.040
+ma purtroppo entrambe le strategie presentano debolezze non di poco conto.
+
+0:02:43.040,0:02:46.180
+La rete Tor possiede Autorità di Directory "semi-fidate"
+
+0:02:46.180,0:02:48.580
+che conferiscono ad un piccolo gruppo di operatori di nodi Tor
+
+0:02:48.580,0:02:51.620
+un'influenza superiore sul consensus della rete.
+
+0:02:51.620,0:02:56.140
+Il consensus della rete determina sostanzialmente chi ha il permesso di inoltrare il traffico sulla rete Tor
+
+0:02:56.140,0:02:58.580
+basandosi sulla visione di suddette Autorità.
+
+0:02:58.580,0:03:02.620
+Inoltre, attacchi basati su correlazione sono possibili su VPN fidate, 
+
+0:03:02.620,0:03:07.080
+rendendo, per attaccanti di rilievo, molto semplice la de-anonimizzazione del traffico degli utenti.
+
+0:03:07.080,0:03:11.720
+Quindi cosa possono fare Alice, Bob, Charlie e Dave per rispondere a queste minacce?
+
+0:03:11.720,0:03:13.240
+Possono usare Kovri!
+
+0:03:13.240,0:03:16.820
+Se usano esclusivamente Kovri per connettersi alla rete Monero,
+
+0:03:16.820,0:03:18.720
+nessuno conoscerà mai i loro indirizzi IP,
+
+0:03:18.720,0:03:20.880
+rendendo quindi inattuabile la sorveglianza passiva,
+
+0:03:20.880,0:03:24.580
+e allo stesso tempo migliorando in modo sostanziale la resistenza di Monero alla censura.
+
+0:03:24.580,0:03:28.420
+Come potete vedere, Kovri è un software che consente agli utenti di inviare transazioni
+
+0:03:28.420,0:03:31.020
+in modo ancora più privato.
+
+0:03:31.020,0:03:33.000
+Addentriamoci ora in alcuni dettagli tecnici
+
+0:03:33.000,0:03:36.660
+per avere una migliore comprensione su come Kovri lavora al suo interno.
+
+0:03:36.660,0:03:39.280
+Kovri convoglia il traffico attraverso la rete I2P
+
+0:03:39.280,0:03:42.360
+utilizzando una "cifratura ad aglio" e un "routing ad aglio".
+
+0:03:42.360,0:03:46.360
+Le informazioni viaggiano all'interno di una sovrastruttura di rete privata attraverso messaggi
+
+0:03:46.360,0:03:50.680
+che vengono cifrati in più strati ogniqualvolta il messaggio transita attraverso i diversi nodi della rete,
+
+0:03:50.680,0:03:53.120
+similarmente a come funziona una Matrioska.
+
+0:03:53.120,0:03:57.580
+Ogni bambola interna possiede un lucchetto e una chiave pubblica verso la prossima bambola.
+
+0:03:57.580,0:04:01.340
+I nodi nella rete non hanno la possibilità di leggere il contenuto del messaggio che viene inoltrato;
+
+0:04:01.340,0:04:04.140
+in questo modo le informazioni inviate dal mittente al destinatario
+
+0:04:04.140,0:04:06.420
+(e viceversa) sono rese sicure.
+
+0:04:06.420,0:04:12.080
+Le uniche informazioni visibili ai nodi sono le istruzioni per inoltrare il messaggio al prossimo nodo.
+
+0:04:12.080,0:04:15.360
+Per rafforzare ulteriormente la privacy, pagando un piccolo prezzo in termini di performance,
+
+0:04:15.360,0:04:18.180
+gli utenti possono connettersi a più nodi.
+
+0:04:18.180,0:04:23.480
+Essenzialmente, Kovri copre il traffico internet di un'applicazione per renderlo anonimo all'interno della rete.
+
+0:04:23.480,0:04:24.940
+Grazie a queste caratteristiche,
+
+0:04:24.940,0:04:29.360
+Kovri è un'ottima soluzione per comunicare su IRC, via email, 
+
+0:04:29.360,0:04:32.120
+o per accedere a servizi nascosti.
+
+0:04:32.120,0:04:34.880
+Kovri rivoluzionerà le connessioni peer-to-peer
+
+0:04:34.880,0:04:38.280
+ed aumenterà globalmente la resilienza e la privacy della rete.
+
+0:04:38.280,0:04:41.780
+Nodi malevoli non potranno più minacciare gli utenti che creano transazioni
+
+0:04:41.780,0:04:44.680
+né bloccare la trasmissione delle transazioni sulla rete.
+
+0:04:44.680,0:04:47.600
+Kovri verrà reso disponibile all'interno dei futuri rilasci di Monero
+
+0:04:47.600,0:04:49.220
+e sarà abilitato di default.
+
+0:04:49.220,0:04:50.260
+Inoltre,
+
+0:04:50.260,0:04:55.340
+Kovri implementerà delle API che ne consentiranno l'utilizzo anche ad altre criptovalute ed applicazioni,
+
+0:04:55.340,0:04:57.180
+non solo a Monero.
+
+0:04:57.180,0:04:59.900
+Per conoscere meglio Monero ed il progetto Kovri,
+
+0:04:59.900,0:05:04.740
+visitate i siti getmonero.org e getkovri.org.

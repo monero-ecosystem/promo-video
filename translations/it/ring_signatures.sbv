@@ -1,0 +1,194 @@
+0:00:01.900,0:00:05.380
+Monero è una moneta elettronica, sicura e non tracciabile.
+
+0:00:05.380,0:00:09.560
+E' opensource, decentralizzata e liberamente accessible a tutti.
+
+0:00:09.560,0:00:12.740
+In questo video, ci concentreremo sulle firme ad anello.
+
+0:00:12.740,0:00:14.580
+Nel video precedente
+
+0:00:14.580,0:00:17.760
+abbiamo spiegato come gli indirizzi nascosti Monero assicurano che gli output
+
+0:00:17.760,0:00:20.560
+non possano essere associati all'indirizzo pubblico del destinatario.
+
+0:00:20.560,0:00:24.820
+Questo è possible grazie all'utilizzo di chiavi di destinazione pubbliche monouso.
+
+0:00:24.820,0:00:28.760
+Le chiavi pubbliche monouso sono spendibili solamente dal destinatario,
+
+0:00:28.760,0:00:33.060
+e solo il destinatario è in grado di rilevare il suo output designato sulla blockchain.
+
+0:00:33.060,0:00:38.020
+Dal momento che tutti gli output non sono collegabili fra loro, viene garantita la privacy del destinatario.
+
+0:00:38.020,0:00:40.380
+Dal lato dell'input della transazione
+
+0:00:40.380,0:00:44.220
+la privacy del mittente è protetta mediante l'utilizzo delle firme ad anello.
+
+0:00:44.220,0:00:46.900
+Una firma ad anello (ring signature) è un tipo di firma digitale
+
+0:00:46.900,0:00:49.980
+nella quale più potenziali firmatari vengono fusi insieme
+
+0:00:49.980,0:00:53.940
+per produrre una firma distintiva che autorizza una transazione.
+
+0:00:53.940,0:00:57.420
+E' l'analogo di una firma su un assegno di un conto bancario cointestato,
+
+0:00:57.420,0:01:00.620
+ma di cui il vero firmatario resta ignoto.
+
+0:01:00.620,0:01:03.580
+La firma digitale è composta da quella del vero firmatario
+
+0:01:03.580,0:01:05.920
+combinato con quella dei non firmatari per formare un "anello",
+
+0:01:05.920,0:01:09.040
+dove tutti i membri sono uguali fra loro ed altrettanto validi.
+
+0:01:09.040,0:01:11.740
+Il vero firmatario è una chiave monouso di spesa
+
+0:01:11.740,0:01:15.040
+associata ad un output che viene speso dal portafoglio del mittente.
+
+0:01:15.040,0:01:18.600
+I non firmatari sono output di transazioni precedenti, estratti dalla blockchain,
+
+0:01:18.600,0:01:20.580
+che funzionano come esche (decoy).
+
+0:01:20.580,0:01:24.180
+Questi output, combinati insieme, vanno a formare gli input di una transazione.
+
+0:01:24.180,0:01:27.760
+Ad un osservatore esterno tutti gli input appaiono, in egual misura, 
+
+0:01:27.760,0:01:30.560
+equivalenti all'output che viene speso nella transazione.
+
+0:01:30.560,0:01:33.980
+Questa funzionalità aiuta il mittente a nascondere l'origine della transazione,
+
+0:01:33.980,0:01:37.840
+rendendo tutti gli input indistinguibili fra di loro.
+
+0:01:37.840,0:01:39.520
+Ora potreste chiedervi:
+
+0:01:39.520,0:01:43.480
+"se un osservatore esterno non ha la possibilità di verificare quale output viene speso,
+
+0:01:43.480,0:01:46.860
+chi mi assicura che qualcuno non possa spendere lo stesso output due volte?"
+
+0:01:46.860,0:01:50.780
+Questo potenziale problema viene risolto mediante l'uso delle "immagini della chiave" (key images).
+
+0:01:50.780,0:01:55.000
+Un'immagine della chiave è una chiave crittografica derivata da un output che viene speso
+
+0:01:55.000,0:01:58.640
+e viene inclusa in ogni transazione basata su firme ad anello.
+
+0:01:58.640,0:02:02.600
+Può esistere solamente un'immagine della chiave per ogni output sulla blockchain
+
+0:02:02.600,0:02:04.600
+ed inoltre, grazie alle sue proprietà crittografiche,
+
+0:02:04.600,0:02:08.860
+non è possibile determinare quale output abbia generato una determinata immagine della chiave.
+
+0:02:08.860,0:02:12.460
+All'interno della blockchain viene mantenuta una lista di tutte le immagini delle chiavi utilizzate,
+
+0:02:12.460,0:02:16.480
+dando la possibilità ai minatori di verificare che nessun output venga speso due volte.
+
+0:02:16.480,0:02:19.780
+Ora vediamo un esempio di come funziona tutto questo.
+
+0:02:19.780,0:02:23.980
+Alice vuole inviare dei Moneroj a Bob con un "ringsize" (dimensione dell'anello) pari a cinque.
+
+0:02:23.980,0:02:26.680
+Uno di questi cinque input proverrà dal portafoglio di Alice
+
+0:02:26.680,0:02:29.200
+e verrà consumato nella transazione.
+
+0:02:29.200,0:02:32.740
+Gli altri quattro input sono arbitrariamente estratti dalla blockchain
+
+0:02:32.740,0:02:34.840
+e vengono usati come esche.
+
+0:02:34.840,0:02:37.480
+Viene formato quindi un gruppo di cinque possibili firmatari
+
+0:02:37.480,0:02:41.860
+ed ognuno di questi potrebbe essere il vero firmatario della transazione.
+
+0:02:41.860,0:02:44.800
+Ad un osservatore esterno, Bob incluso,
+
+0:02:44.800,0:02:49.500
+non è chiaro quale input sia stato veramente firmato dalla chiave monouso di spesa di Alice.
+
+0:02:49.500,0:02:51.380
+Eppure, grazie all'immagine della chiave,
+
+0:02:51.380,0:02:55.880
+la rete è in grado di confermare con sicurezza che i Moneroj trasferiti a Bob
+
+0:02:55.880,0:02:58.200
+non siano stati spesi due volte.
+
+0:02:58.200,0:03:00.920
+Come potete vedere, grazie all'utilizzo delle firme ad anello,
+
+0:03:00.920,0:03:03.220
+Monero protegge la privacy del mittente
+
+0:03:03.220,0:03:05.260
+oscurando la sorgente degli input e,
+
+0:03:05.260,0:03:06.560
+facendo questo,
+
+0:03:06.560,0:03:11.320
+garantisce che l'origine di ogni Monero rimanga non tracciabile.
+
+0:03:11.320,0:03:13.900
+Per aumentare la privacy di entrambe le parti
+
+0:03:13.900,0:03:18.200
+sono state implementate le Transazioni Confidenziali ad Anello (Ring Confidential Transactions),
+
+0:03:18.200,0:03:21.280
+comunemente note come RingCT, al fine di nascondere l'ammontare delle transazioni.
+
+0:03:21.280,0:03:24.960
+RingCT porta alcuni miglioramenti al protocollo delle firme ad anello.
+
+0:03:24.960,0:03:28.520
+Affronteremo in dettaglio l'argomento RingCT nel nostro prossimo video.
+
+0:03:28.520,0:03:32.960
+Se siete interessati a ciò che rende Monero la criptovaluta leader focalizzata sulla privacy,
+
+0:03:32.960,0:03:37.900
+guardate gli altri video o visitate il sito getmonero.org.
